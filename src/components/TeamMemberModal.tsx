@@ -10,7 +10,7 @@ interface TeamMemberModalProps {
 const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) => {
   const [showAllDiplomas, setShowAllDiplomas] = useState(false)
 
-  // Показати 6 або всі сертифікати
+  // іshow 6 diploms i drugoe
   const diplomasToShow = showAllDiplomas 
     ? member.diplomas 
     : member.diplomas.slice(0, 6)
@@ -141,8 +141,26 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
         <div className="p-6 md:p-8">
           {/* Header */}
           <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
-            <div className="w-32 h-32 gradient-bg rounded-full flex items-center justify-center text-4xl font-bold text-white">
-              {member.name.split(' ').map(n => n[0]).join('')}
+            <div className="w-32 h-32 gradient-bg rounded-full flex items-center justify-center overflow-hidden">
+              {member.avatar ? (
+                <img 
+                  src={member.avatar} 
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const initials = document.createElement('div');
+                    initials.className = 'w-full h-full flex items-center justify-center text-4xl font-bold text-white';
+                    initials.textContent = member.name.split(' ').map(n => n[0]).join('');
+                    target.parentNode?.appendChild(initials);
+                  }}
+                />
+              ) : (
+                <div className="text-4xl font-bold text-white">
+                  {member.name.split(' ').map(n => n[0]).join('')}
+                </div>
+              )}
             </div>
             
             <div className="flex-1">
@@ -273,7 +291,7 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
                 ))}
               </div>
               
-              {/* Кнопка для показу всіх сертифікатів */}
+              {/* button(show sserificates nad awards) */}
               {member.diplomas.length > 6 && (
                 <div className="mt-6 text-center">
                   <button

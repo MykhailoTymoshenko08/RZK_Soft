@@ -2,6 +2,7 @@ export interface TeamMember {
   id: number;
   name: string;
   role: string;
+  avatar?: string;
   skills: string[];
   socials: {
     github?: string;
@@ -24,6 +25,7 @@ export const teamData: TeamMember[] = [
     id: 1,
     name: "Mykhailo Tymoshenko",
     role: "Founder, CEO & Lead Full-Stack/AI Engineer",
+    avatar: "/images/team/mykhailo_tymoshenko.jpg",
     skills: [
       "Python (LangChain, ChromaDB, Tavily, FastAPI, Streamlit, SQLite3, asyncio, pydantic, RAG)", 
       "Linux",
@@ -193,10 +195,12 @@ export const teamData: TeamMember[] = [
       // }
     ]
   },
+
   {
     id: 2,
     name: "Ivan Krutkevych",
     role: "AI Engineer & CTO",
+    avatar: "/images/team/ivan_krutkevych.jpg",
     skills: [
       "Python (FastAPI, LangChain, LangGraph, OpenCV, Aiogram, Selenium, Bs4)",
       "Machine Learning",
@@ -249,6 +253,7 @@ export const teamData: TeamMember[] = [
     id: 3,
     name: "Volodymyr Lavrientiev",
     role: "Lead Mobile Developer",
+    avatar: "/images/team/volodymyr_lavrientiev.jpg",
     skills: [
       "Jetpack Compose",
       "React Native",
@@ -303,7 +308,6 @@ export const teamData: TeamMember[] = [
         link: ""
       }
     ],
-
     diplomas: [
       {
         title: "UI/UX Design Certification",
@@ -315,10 +319,12 @@ export const teamData: TeamMember[] = [
       }
     ]
   },
+
   {
     id: 4,
     name: "Mykhailo Haliapa",
     role: "Junior Developer (C/JavaScript)",
+    avatar: "/images/team/mykhailo_haliapa.jpg",
     skills: [
       "React.js", 
       "C (programming language)", 
@@ -367,6 +373,7 @@ export const teamData: TeamMember[] = [
       }
     ]
   },
+
   {
     id: 5,
     name: "Oleh Shevchenko",
@@ -403,10 +410,12 @@ export const teamData: TeamMember[] = [
       }
     ]
   },
+
   {
   id: 6,
   name: "Hiro Tanaka",
   role: "Game Designer",
+  avatar: "/images/team/hiro_tanaka.jpg",
   skills: [
     "Game Mechanics Design",
     "Level Design",
@@ -438,228 +447,239 @@ export const teamData: TeamMember[] = [
       link: "#"
     }
   ]
-},
-{
-  id: 7,
-  name: "Anastasiya Kovalenko",
-  role: "Frontend Developer",
-  skills: [
-    "React.js",
-    "TypeScript",
-    "Next.js",
-    "HTML & CSS",
-    "JavaScript",
-    "Redux",
-    "Tailwind CSS",
-    "Responsive Design",
-    "Unit Testing (Jest)"
-  ],
-  socials: {
-    instagram: ""
   },
-  projects: [
-    {
-      title: "E-Learning Platform",
-      description: "Developed interactive frontend with React & TypeScript, including quizzes and dashboards",
-      link: "#"
-    },
-    {
-      title: "Startup Landing Page",
-      description: "Built responsive landing page with Tailwind CSS and Next.js",
-      link: "#"
-    }
-  ],
-  diplomas: [
-    {
-      title: "Certificate in Advanced Frontend Development",
-      link: "#"
-    }
-  ]
-},
-{
-  id: 8,
-  name: "Sophiya Shovicka",
-  role: "Data Engineer",
-  skills: [
-    "Python",
-    "SQL",
-    "PostgreSQL",
-    "ETL Pipelines",
-    "Airflow",
-    "Data Modeling",
-    "BigQuery",
-    "Data Warehousing",
-    "Data Cleaning",
-    "Analytics"
-  ],
-  socials: {
-    linkedin: "https://linkedin.com/in/sophiya-shovvicka",
-    instagram: ""
-  },
-  projects: [
-    {
-      title: "Sales Analytics Pipeline",
-      description: "Built ETL pipelines and dashboards to provide actionable insights for e-commerce platform",
-      link: "#"
-    },
-    {
-      title: "IoT Sensor Data Platform",
-      description: "Aggregated and processed sensor data for real-time analytics and monitoring",
-      link: "#"
-    }
-  ],
-  diplomas: [
-    {
-      title: "Certified Data Engineer (Google Cloud)",
-      link: "#"
-    }
-  ]
-},
-{
-  id: 10,
-  name: "Anya Malykhina",
-  role: "Lead UI/UX Designer",
-  skills: [
-    "Figma",
-    "Adobe XD",
-    "Wireframing",
-    "Prototyping",
-    "User Research",
-    "Interaction Design",
-    "Design Systems",
-    "Responsive Design"
-  ],
-  socials: {
-    instagram: "https://www.instagram.com/kkeews.s/"
-  },
-  projects: [
-    {
-      title: "Student Portal Redesign",
-      description: "Redesigned the university student portal for better usability and accessibility",
-      link: "#"
-    },
-    {
-      title: "Local NGO App UI",
-      description: "Created a simple, intuitive interface for a volunteer coordination app",
-      link: "#"
-    }
-  ],
-  diplomas: [
-    {
-      title: "Best Student Design Project – Kyiv UX Challenge 2025",
-      link: "#"
-    }
-  ]
-},
-{
-  id: 11,
-  name: "Katherina Kravcuk",
-  role: "UI/UX Designer",
-  skills: [
-    "Figma",
-    "Sketch",
-    "Prototyping",
-    "Wireframing",
-    "User Testing",
-    "Design Systems",
-    "Interaction Design",
-    "Illustration"
-  ],
-  socials: {
-    instagram: "https://www.instagram.com/ek.kravchuk/"
-  },
-  projects: [
-    {
-      title: "Campus Events App",
-      description: "Designed UI/UX for mobile app to manage and track student events",
-      link: "#"
-    },
-    {
-      title: "E-Learning Platform Prototype",
-      description: "Created interactive prototypes for online learning modules",
-      link: "#"
-    }
-  ],
-  diplomas: [
-    {
-      title: "Certificate in UI/UX Design – EdEra 2025",
-      link: "#"
-    }
-  ]
-},
-{
-  id: 9,
-  name: "Kateryna Bondar",
-  role: "Product Manager",
-  skills: [
-    "Agile / Scrum",
-    "Jira",
-    "Roadmapping",
-    "Requirements Gathering",
-    "Prioritization",
-    "Team Coordination",
-    "Wireframing",
-    "Stakeholder Communication"
-  ],
-  socials: {
-    linkedin: "https://linkedin.com/in/kateryna-bondar",
-    instagram: ""
-  },
-  projects: [
-    {
-      title: "Education App Launch",
-      description: "Managed cross-functional team to deliver educational mobile app on time",
-      link: "#"
-    },
-    {
-      title: "E-commerce Platform",
-      description: "Defined product roadmap and coordinated with engineering and design teams",
-      link: "#"
-    }
-  ],
-  diplomas: [
-    {
-      title: "Certified Scrum Product Owner (CSPO)",
-      link: "#"
-    }
-  ]
-},
 
-{
-  id: 7,
-  name: "Dmytro Shevchuk",
-  role: "Junior DevOps Engineer",
-  skills: [
-    "Linux",
-    "Docker",
-    "Git/GitHub",
-    "CI/CD Basics",
-    "Bash Scripting",
-    "Monitoring Basics",
-    "Cloud Fundamentals (AWS Free Tier)",
-    "Problem Solving"
-  ],
-  socials: {
-    linkedin: "https://linkedin.com/in/dmytro-shevchuk",
-    instagram: "https://instagram.com/dmytro_shevchuk_design"
-  },
-  projects: [
-    {
-      title: "Student Project Deployment",
-      description: "Deployed a student web project using Docker and GitHub Actions CI/CD",
-      link: "#"
+  {
+    id: 7,
+    name: "Anastasiya Kovalenko",
+    role: "Frontend Developer",
+    avatar: "/images/team/anastasiya_kovalenko.jpg",
+    skills: [
+      "React.js",
+      "TypeScript",
+      "Next.js",
+      "HTML & CSS",
+      "JavaScript",
+      "Redux",
+      "Tailwind CSS",
+      "Responsive Design",
+      "Unit Testing (Jest)"
+    ],
+    socials: {
+      instagram: "",
+      linkedin: "https://www.linkedin.com/in/anastasiya-kovalenko-11a415298/?originalSubdomain=uk"
     },
-    {
-      title: "Personal Portfolio Automation",
-      description: "Automated deployment for personal website with Docker and GitHub Pages",
-      link: "#"
-    }
-  ],
-  diplomas: [
-    {
-      title: "Certificate in DevOps Fundamentals – Coursera 2025",
-      link: "#"
-    }
-  ]
-}
+    projects: [
+      {
+        title: "E-Learning Platform",
+        description: "Developed interactive frontend with React & TypeScript, including quizzes and dashboards",
+        link: "#"
+      },
+      {
+        title: "Startup Landing Page",
+        description: "Built responsive landing page with Tailwind CSS and Next.js",
+        link: "#"
+      }
+    ],
+    diplomas: [
+      {
+        title: "Certificate in Advanced Frontend Development",
+        link: "#"
+      }
+    ]
+  },
+
+  {
+    id: 8,
+    name: "Sofiya Shapialevich",
+    role: "Data Engineer",
+    avatar: "/images/team/sofiya_shapialevich.jpg",
+    skills: [
+      "Python",
+      "SQL",
+      "PostgreSQL",
+      "ETL Pipelines",
+      "Airflow",
+      "Data Modeling",
+      "BigQuery",
+      "Data Warehousing",
+      "Data Cleaning",
+      "Analytics"
+    ],
+    socials: {
+      linkedin: "https://linkedin.com/in/sophiya-shovvicka",
+      instagram: ""
+    },
+    projects: [
+      {
+        title: "Sales Analytics Pipeline",
+        description: "Built ETL pipelines and dashboards to provide actionable insights for e-commerce platform",
+        link: "#"
+      },
+      {
+        title: "IoT Sensor Data Platform",
+        description: "Aggregated and processed sensor data for real-time analytics and monitoring",
+        link: "#"
+      }
+    ],
+    diplomas: [
+      {
+        title: "Certified Data Engineer (Google Cloud)",
+        link: "#"
+      }
+    ]
+  },
+
+  {
+    id: 10,
+    name: "Anya Malykhina",
+    role: "Lead UI/UX Designer",
+    avatar: "/images/team/anya_malykhina.jpg",
+    skills: [
+      "Figma",
+      "Adobe XD",
+      "Wireframing",
+      "Prototyping",
+      "User Research",
+      "Interaction Design",
+      "Design Systems",
+      "Responsive Design"
+    ],
+    socials: {
+      instagram: "https://www.instagram.com/kkeews.s/"
+    },
+    projects: [
+      {
+        title: "Student Portal Redesign",
+        description: "Redesigned the university student portal for better usability and accessibility",
+        link: "#"
+      },
+      {
+        title: "Local NGO App UI",
+        description: "Created a simple, intuitive interface for a volunteer coordination app",
+        link: "#"
+      }
+    ],
+    diplomas: [
+      {
+        title: "Best Student Design Project – Kyiv UX Challenge 2025",
+        link: "#"
+      }
+    ]
+  },
+
+  {
+    id: 11,
+    name: "Katherina Kravcuk",
+    role: "UI/UX Designer",
+    avatar: "/images/team/katherina_kravcuk.jpg",
+    skills: [
+      "Figma",
+      "Sketch",
+      "Prototyping",
+      "Wireframing",
+      "User Testing",
+      "Design Systems",
+      "Interaction Design",
+      "Illustration"
+    ],
+    socials: {
+      instagram: "https://www.instagram.com/ek.kravchuk/"
+    },
+    projects: [
+      {
+        title: "Campus Events App",
+        description: "Designed UI/UX for mobile app to manage and track student events",
+        link: "#"
+      },
+      {
+        title: "E-Learning Platform Prototype",
+        description: "Created interactive prototypes for online learning modules",
+        link: "#"
+      }
+    ],
+    diplomas: [
+      {
+        title: "Certificate in UI/UX Design – EdEra 2025",
+        link: "#"
+      }
+    ]
+  },
+
+  {
+    id: 9,
+    name: "Katherina Bondar",
+    role: "Product Manager",
+    avatar: "/images/team/katherina_bondar.jpg",
+    skills: [
+      "Agile / Scrum",
+      "Jira",
+      "Roadmapping",
+      "Requirements Gathering",
+      "Prioritization",
+      "Team Coordination",
+      "Wireframing",
+      "Stakeholder Communication"
+    ],
+    socials: {
+      linkedin: "https://linkedin.com/in/kateryna-bondar",
+      instagram: ""
+    },
+    projects: [
+      {
+        title: "Education App Launch",
+        description: "Managed cross-functional team to deliver educational mobile app on time",
+        link: "#"
+      },
+      {
+        title: "E-commerce Platform",
+        description: "Defined product roadmap and coordinated with engineering and design teams",
+        link: "#"
+      }
+    ],
+    diplomas: [
+      {
+        title: "Certified Scrum Product Owner (CSPO)",
+        link: "#"
+      }
+    ]
+  },
+
+  {
+    id: 7,
+    name: "Dmytro Shevchuk",
+    role: "Junior DevOps Engineer",
+    skills: [
+      "Linux",
+      "Docker",
+      "Git/GitHub",
+      "CI/CD Basics",
+      "Bash Scripting",
+      "Monitoring Basics",
+      "Cloud Fundamentals (AWS Free Tier)",
+      "Problem Solving"
+    ],
+    socials: {
+      linkedin: "https://linkedin.com/in/dmytro-shevchuk",
+      instagram: "https://instagram.com/dmytro_shevchuk_design"
+    },
+    projects: [
+      {
+        title: "Student Project Deployment",
+        description: "Deployed a student web project using Docker and GitHub Actions CI/CD",
+        link: "#"
+      },
+      {
+        title: "Personal Portfolio Automation",
+        description: "Automated deployment for personal website with Docker and GitHub Pages",
+        link: "#"
+      }
+    ],
+    diplomas: [
+      {
+        title: "Certificate in DevOps Fundamentals – Coursera 2025",
+        link: "#"
+      }
+    ]
+  }
 ];

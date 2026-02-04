@@ -34,8 +34,26 @@ const TeamMemberCard = ({ member, onClick, language }: TeamMemberCardProps) => {
       className="team-card hover-lift hover-glow"
       onClick={onClick}
     >
-      <div className="team-avatar">
-        {member.name.split(' ').map(n => n[0]).join('')}
+      <div className="team-avatar overflow-hidden">
+        {member.avatar ? (
+          <img 
+            src={member.avatar} 
+            alt={member.name}
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+              const initials = document.createElement('div');
+              initials.className = 'w-full h-full flex items-center justify-center text-2xl font-bold text-white';
+              initials.textContent = member.name.split(' ').map(n => n[0]).join('');
+              target.parentNode?.appendChild(initials);
+            }}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-2xl font-bold text-white">
+            {member.name.split(' ').map(n => n[0]).join('')}
+          </div>
+        )}
       </div>
       
       <h3 className="text-xl font-bold mb-2">{member.name}</h3>
