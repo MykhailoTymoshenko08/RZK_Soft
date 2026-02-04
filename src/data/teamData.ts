@@ -570,9 +570,9 @@ export const teamData: TeamMember[] = [
 
   {
     id: 11,
-    name: "Katherina Kravcuk",
+    name: "Katherina Beregova",
     role: "UI/UX Designer",
-    avatar: "/images/team/katherina_kravcuk.jpg",
+    avatar: "",
     skills: [
       "Figma",
       "Sketch",
@@ -584,7 +584,7 @@ export const teamData: TeamMember[] = [
       "Illustration"
     ],
     socials: {
-      instagram: "https://www.instagram.com/ek.kravchuk/"
+      instagram: ""
     },
     projects: [
       {
