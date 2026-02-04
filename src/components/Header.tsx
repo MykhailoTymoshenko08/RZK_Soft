@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 
 const Header = () => {
+  const { language, setLanguage, translations } = useLanguage()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
-  const [language, setLanguage] = useState('en')
   const [scrolled, setScrolled] = useState(false)
 
   const languages = [
@@ -13,44 +14,6 @@ const Header = () => {
     { code: 'de', name: 'Deutsch', flag: '/images/gerLang.png' },
     { code: 'nl', name: 'Nederlands', flag: '/images/nethLang.png' },
   ]
-
-  const translations: Record<string, Record<string, string>> = {
-    en: {
-      homePage: 'Home',
-      aboutUsPage: 'About Us',
-      servicesPage: 'Services',
-      teamPage: 'Our Team',
-      contactPage: 'Contact'
-    },
-    uk: {
-      homePage: 'Головна',
-      aboutUsPage: 'Про нас',
-      servicesPage: 'Послуги',
-      teamPage: 'Наша команда',
-      contactPage: 'Контакти'
-    },
-    es: {
-      homePage: 'Inicio',
-      aboutUsPage: 'Sobre Nosotros',
-      servicesPage: 'Servicios',
-      teamPage: 'Nuestro Equipo',
-      contactPage: 'Contacto'
-    },
-    de: {
-      homePage: 'Startseite',
-      aboutUsPage: 'Über Uns',
-      servicesPage: 'Dienstleistungen',
-      teamPage: 'Unser Team',
-      contactPage: 'Kontakt'
-    },
-    nl: {
-      homePage: 'Home',
-      aboutUsPage: 'Over Ons',
-      servicesPage: 'Diensten',
-      teamPage: 'Ons Team',
-      contactPage: 'Contact'
-    }
-  }
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
@@ -68,23 +31,12 @@ const Header = () => {
   }
 
   useEffect(() => {
-    const savedLang = localStorage.getItem('selectedLang')
-    if (savedLang) setLanguage(savedLang)
-  }, [])
-
-  useEffect(() => {
-    localStorage.setItem('selectedLang', language)
-  }, [language])
-
-  useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  const currentTranslations = translations[language] || translations.en
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -96,35 +48,20 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
-            <button 
-              onClick={() => scrollToSection('home')}
-              className="nav-link"
-            >
-              {currentTranslations.homePage}
+            <button onClick={() => scrollToSection('home')} className="nav-link">
+              {translations.homePage}
             </button>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="nav-link"
-            >
-              {currentTranslations.aboutUsPage}
+            <button onClick={() => scrollToSection('about')} className="nav-link">
+              {translations.aboutUsPage}
             </button>
-            <button 
-              onClick={() => scrollToSection('services')}
-              className="nav-link"
-            >
-              {currentTranslations.servicesPage}
+            <button onClick={() => scrollToSection('services')} className="nav-link">
+              {translations.servicesPage}
             </button>
-            <button 
-              onClick={() => scrollToSection('team')}
-              className="nav-link"
-            >
-              {currentTranslations.teamPage}
+            <button onClick={() => scrollToSection('team')} className="nav-link">
+              {translations.teamPage}
             </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="nav-link"
-            >
-              {currentTranslations.contactPage}
+            <button onClick={() => scrollToSection('contact')} className="nav-link">
+              {translations.contactPage}
             </button>
 
             {/* Language Selector */}
@@ -150,7 +87,7 @@ const Header = () => {
                     <button
                       key={lang.code}
                       onClick={() => {
-                        setLanguage(lang.code)
+                        setLanguage(lang.code as any) // cast to Language type
                         setIsLangMenuOpen(false)
                       }}
                       className={`language-option ${language === lang.code ? 'active' : ''}`}
@@ -184,7 +121,7 @@ const Header = () => {
                     <button
                       key={lang.code}
                       onClick={() => {
-                        setLanguage(lang.code)
+                        setLanguage(lang.code as any)
                         setIsLangMenuOpen(false)
                       }}
                       className={`language-option ${language === lang.code ? 'active' : ''}`}
@@ -215,35 +152,20 @@ const Header = () => {
         {/* Mobile Menu */}
         <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''} md:hidden`}>
           <div className="flex flex-col space-y-4 mt-8">
-            <button 
-              onClick={() => scrollToSection('home')}
-              className="nav-link text-lg"
-            >
-              {currentTranslations.homePage}
+            <button onClick={() => scrollToSection('home')} className="nav-link text-lg">
+              {translations.homePage}
             </button>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="nav-link text-lg"
-            >
-              {currentTranslations.aboutUsPage}
+            <button onClick={() => scrollToSection('about')} className="nav-link text-lg">
+              {translations.aboutUsPage}
             </button>
-            <button 
-              onClick={() => scrollToSection('services')}
-              className="nav-link text-lg"
-            >
-              {currentTranslations.servicesPage}
+            <button onClick={() => scrollToSection('services')} className="nav-link text-lg">
+              {translations.servicesPage}
             </button>
-            <button 
-              onClick={() => scrollToSection('team')}
-              className="nav-link text-lg"
-            >
-              {currentTranslations.teamPage}
+            <button onClick={() => scrollToSection('team')} className="nav-link text-lg">
+              {translations.teamPage}
             </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="nav-link text-lg"
-            >
-              {currentTranslations.contactPage}
+            <button onClick={() => scrollToSection('contact')} className="nav-link text-lg">
+              {translations.contactPage}
             </button>
           </div>
         </div>

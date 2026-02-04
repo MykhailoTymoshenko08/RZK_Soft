@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { TeamMember } from '../data/teamData'
 
 interface TeamMemberModalProps {
@@ -7,6 +8,13 @@ interface TeamMemberModalProps {
 }
 
 const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) => {
+  const [showAllDiplomas, setShowAllDiplomas] = useState(false)
+
+  // Показати 6 або всі сертифікати
+  const diplomasToShow = showAllDiplomas 
+    ? member.diplomas 
+    : member.diplomas.slice(0, 6)
+
   const translations = {
     en: {
       techStack: "Tech Stack",
@@ -18,7 +26,10 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
       webDevelopment: "Web Development",
       programmingLanguages: "Programming Languages",
       toolsPlatforms: "Tools & Platforms",
-      other: "Other"
+      other: "Other",
+      showMore: "Show more",
+      showLess: "Show less",
+      certificates: "certificates"
     },
     uk: {
       techStack: "Технології",
@@ -30,7 +41,10 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
       webDevelopment: "Веб-розробка",
       programmingLanguages: "Мови програмування",
       toolsPlatforms: "Інструменти та платформи",
-      other: "Інше"
+      other: "Інше",
+      showMore: "Показати ще",
+      showLess: "Показати менше",
+      certificates: "сертифікатів"
     },
     es: {
       techStack: "Tecnologías",
@@ -42,7 +56,10 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
       webDevelopment: "Desarrollo Web",
       programmingLanguages: "Lenguajes de Programación",
       toolsPlatforms: "Herramientas y Plataformas",
-      other: "Otro"
+      other: "Otro",
+      showMore: "Mostrar más",
+      showLess: "Mostrar menos",
+      certificates: "certificados"
     },
     de: {
       techStack: "Tech Stack",
@@ -54,7 +71,10 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
       webDevelopment: "Webentwicklung",
       programmingLanguages: "Programmiersprachen",
       toolsPlatforms: "Tools und Plattformen",
-      other: "Andere"
+      other: "Andere",
+      showMore: "Mehr anzeigen",
+      showLess: "Weniger anzeigen",
+      certificates: "Zertifikate"
     },
     nl: {
       techStack: "Tech Stack",
@@ -66,7 +86,10 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
       webDevelopment: "Webontwikkeling",
       programmingLanguages: "Programmeertalen",
       toolsPlatforms: "Tools en Platforms",
-      other: "Overig"
+      other: "Overig",
+      showMore: "Meer tonen",
+      showLess: "Minder tonen",
+      certificates: "certificaten"
     }
   }
 
@@ -83,13 +106,13 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
 
     skills.forEach((skill: string) => {
       const lowerSkill = skill.toLowerCase()
-      if (lowerSkill.includes('python') || lowerSkill.includes('ai') || lowerSkill.includes('llm') || lowerSkill.includes('machine learning')) {
+      if (lowerSkill.includes('python') || lowerSkill.includes('analytical skills') || lowerSkill.includes('llm') || lowerSkill.includes('machine learning')) {
         categories[currentTranslations.aiPython].push(skill)
-      } else if (lowerSkill.includes('react') || lowerSkill.includes('javascript') || lowerSkill.includes('html') || lowerSkill.includes('css') || lowerSkill.includes('web')) {
+      } else if (lowerSkill.includes('react') || lowerSkill.includes('javascript') || lowerSkill.includes('typescript') || lowerSkill.includes('next') || lowerSkill.includes('tailwind css') || lowerSkill.includes('graphql') || lowerSkill.includes('redux') || lowerSkill.includes('html') || lowerSkill.includes('css')  || lowerSkill.includes('web')) {
         categories[currentTranslations.webDevelopment].push(skill)
-      } else if (lowerSkill.includes('java') || lowerSkill.includes('c++') || lowerSkill.includes('assembly') || lowerSkill.includes('typescript')) {
+      } else if (lowerSkill.includes('java') || lowerSkill.includes('c++') || lowerSkill.includes('c (programming language)') || lowerSkill.includes('assembly') || lowerSkill.includes('typescript') || lowerSkill.includes('sql')) {
         categories[currentTranslations.programmingLanguages].push(skill)
-      } else if (lowerSkill.includes('docker') || lowerSkill.includes('git') || lowerSkill.includes('linux') || lowerSkill.includes('postgresql') || lowerSkill.includes('aws') || lowerSkill.includes('cloud')) {
+      } else if (lowerSkill.includes('docker') || lowerSkill.includes('git') || lowerSkill.includes('linux') || lowerSkill.includes('postgresql') || lowerSkill.includes('redis') || lowerSkill.includes('openrouter api') || lowerSkill.includes('cloud')) {
         categories[currentTranslations.toolsPlatforms].push(skill)
       } else {
         categories[currentTranslations.other].push(skill)
@@ -234,7 +257,7 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
               </h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {member.diplomas.slice(0, 6).map((diploma, index) => (
+                {diplomasToShow.map((diploma, index) => (
                   <a
                     key={index}
                     href={diploma.link}
@@ -248,15 +271,22 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
                     </span>
                   </a>
                 ))}
-                
-                {member.diplomas.length > 6 && (
-                  <div className="custom-card p-4 flex items-center justify-center">
-                    <span className="text-white/60">
-                      +{member.diplomas.length - 6} more certificates
-                    </span>
-                  </div>
-                )}
               </div>
+              
+              {/* Кнопка для показу всіх сертифікатів */}
+              {member.diplomas.length > 6 && (
+                <div className="mt-6 text-center">
+                  <button
+                    onClick={() => setShowAllDiplomas(!showAllDiplomas)}
+                    className="px-6 py-3 bg-brandCyan hover:bg-cyan-600 text-white rounded-lg transition-colors font-medium"
+                  >
+                    {showAllDiplomas 
+                      ? `${currentTranslations.showLess}`
+                      : `${currentTranslations.showMore} (${member.diplomas.length - 6}+ ${currentTranslations.certificates})`
+                    }
+                  </button>
+                </div>
+              )}
             </div>
           )}
         </div>
