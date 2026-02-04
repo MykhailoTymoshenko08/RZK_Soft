@@ -1,4 +1,22 @@
 import { useLanguage } from '../contexts/LanguageContext'
+import { 
+  FaGlobe, 
+  FaPalette, 
+  FaMobileAlt,
+  FaLightbulb,
+  FaRobot,
+  FaCloud,
+  FaBriefcase,
+  FaTools,
+  // FaCode,
+  // FaPencilRuler,
+  // FaDatabase,
+  // FaShieldAlt,
+  // FaChartLine,
+  // FaServer,
+  // FaCogs,
+  // FaHeadset
+} from 'react-icons/fa'
 
 const Services = () => {
   const { translations } = useLanguage()
@@ -6,7 +24,7 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      icon: '🌐',
+      icon: <FaGlobe className="w-8 h-8" />,
       iconBg: 'bg-blue-500',
       title: translations.webDevelopmentPage,
       description: translations.webDevelopmentDesc,
@@ -14,7 +32,7 @@ const Services = () => {
     },
     {
       id: 2,
-      icon: '🎨',
+      icon: <FaPalette className="w-8 h-8" />,
       iconBg: 'bg-purple-500',
       title: translations.designPage,
       description: translations.designDesc,
@@ -22,7 +40,7 @@ const Services = () => {
     },
     {
       id: 3,
-      icon: '📱',
+      icon: <FaMobileAlt className="w-8 h-8" />,
       iconBg: 'bg-green-500',
       title: translations.mobilePage,
       description: translations.mobileDesc,
@@ -30,7 +48,7 @@ const Services = () => {
     },
     {
       id: 4,
-      icon: '💡',
+      icon: <FaLightbulb className="w-8 h-8" />,
       iconBg: 'bg-yellow-500',
       title: translations.brandingPage,
       description: translations.brandingDesc,
@@ -38,7 +56,7 @@ const Services = () => {
     },
     {
       id: 5,
-      icon: '🤖',
+      icon: <FaRobot className="w-8 h-8" />,
       iconBg: 'bg-pink-500',
       title: translations.aiMlPage,
       description: translations.aiMlDesc,
@@ -46,7 +64,7 @@ const Services = () => {
     },
     {
       id: 6,
-      icon: '☁️',
+      icon: <FaCloud className="w-8 h-8" />,
       iconBg: 'bg-indigo-500',
       title: translations.devOpsPage,
       description: translations.devOpsDesc,
@@ -54,7 +72,7 @@ const Services = () => {
     },
     {
       id: 7,
-      icon: '💼',
+      icon: <FaBriefcase className="w-8 h-8" />,
       iconBg: 'bg-cyan-500',
       title: translations.consultingPage,
       description: translations.consultingDesc,
@@ -62,7 +80,7 @@ const Services = () => {
     },
     {
       id: 8,
-      icon: '🔧',
+      icon: <FaTools className="w-8 h-8" />,
       iconBg: 'bg-orange-500',
       title: translations.maintenancePage,
       description: translations.maintenanceDesc,
@@ -82,7 +100,7 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Список послуг */}
+        {/* service list */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <div 
@@ -113,7 +131,7 @@ const Services = () => {
           ))}
         </div>
         
-        {/* Блок "Looking for more" + Our Process */}
+        {/* box "Looking for more" + our process */}
         <div className="mt-16">
           <div className="custom-card p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">

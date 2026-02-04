@@ -36,7 +36,7 @@ const allTranslations: Record<Language, Record<string, string>> = {
     quickLinks: 'Quick Links',
     contactUs: 'Contact Us',
     followUs: 'Follow Us',
-    // About
+    // about
     aboutUsPage: "About Us",
     aboutText: "RZK Soft is a dynamic software development agency specializing in creating custom solutions for businesses of all sizes. With expertise in modern technologies and a passion for innovation, we transform ideas into powerful digital experiences.",
     missionTitle: "Our Mission",
@@ -46,7 +46,7 @@ const allTranslations: Record<Language, Record<string, string>> = {
     valuesTitle: "Our Values",
     valuesText: "Quality, Innovation, Integrity, and Client Success are at the core of everything we do.",
 
-    // Services  Our Process
+    // services  our process
     ourProcess: "Our Process",
     discoveryTitle: "Discovery & Planning",
     discoveryText: "Understand requirements and create roadmap",
@@ -56,7 +56,7 @@ const allTranslations: Record<Language, Record<string, string>> = {
     developmentText: "Code implementation with agile methodology",
     testingTitle: "Testing & Deployment",
     testingText: "Quality assurance and production launch",
-    // About – Why Choose
+    // about  why choose
     whyChooseTitle: "Why Choose RZK Soft?",
     whyChoose1: "Expert team with diverse skill sets",
     whyChoose2: "Cutting-edge technology stack",
@@ -64,7 +64,7 @@ const allTranslations: Record<Language, Record<string, string>> = {
     whyChoose4: "Transparent communication",
     whyChoose5: "Competitive pricing",
 
-    // Services – Looking for more
+    // services  looking for more
     lookingForMore: "Looking for something specific?",
     contactDesc: "We also specialize in custom solutions. Contact us to discuss your specific requirements.",
     getInTouch: "Get in Touch",

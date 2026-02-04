@@ -10,7 +10,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Simulate loading time
+    // loading time
     const timer = setTimeout(() => {
       setIsLoading(false)
     }, 500)

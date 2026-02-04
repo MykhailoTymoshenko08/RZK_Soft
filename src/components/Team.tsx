@@ -55,7 +55,7 @@ const Team = () => {
             {translations.meetOurTeamDesc}
           </p>
 
-          {/* Фільтри */}
+          {/* filters */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             <button
               onClick={() => filterTeam('all')}
@@ -84,7 +84,7 @@ const Team = () => {
           </div>
         </div>
 
-        {/* Сітка карток команди */}
+        {/*team members grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
           {filteredTeam.map((member, index) => (
             <div key={member.id} className={`fade-in-up delay-${(index % 4) * 100}`}>
@@ -97,12 +97,12 @@ const Team = () => {
           ))}
         </div>
 
-        {/* Кнопка перегляду всієї команди */}
+        {/* button view all team */}
         <div className="text-center">
           <button className="btn-secondary">{translations.viewAllTeam}</button>
         </div>
 
-        {/* Модальне вікно */}
+        {/* modal view */}
         {selectedMember && (
           <TeamMemberModal
             member={selectedMember}

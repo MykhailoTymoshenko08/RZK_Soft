@@ -66,7 +66,7 @@ const TeamMemberCard = ({ member, onClick, language }: TeamMemberCardProps) => {
             className="tag"
             onClick={(e) => {
               e.stopPropagation()
-              // Filter by skill could be added here
+              // filter by skill could be added here(if needed but blablabla)
             }}
           >
             {skill.length > 20 ? skill.substring(0, 20) + '...' : skill}

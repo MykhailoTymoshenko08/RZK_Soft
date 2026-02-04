@@ -1,7 +1,7 @@
 import { useLanguage } from '../contexts/LanguageContext'
 import { useState } from 'react'
 
-// Імпорт іконок
+// icons
 import { 
   FaPhoneAlt, 
   FaEnvelope, 
@@ -38,7 +38,7 @@ const Footer = () => {
     translations.brandingPage,
     translations.aiMlPage,
     translations.devOpsPage
-  ]
+  ].filter(service => service && service.trim() !== '');
 
   const contactInfo = [
     {
@@ -75,14 +75,8 @@ const Footer = () => {
     setSubmitStatus(null)
 
     try {
-      // Тут буде реальна логіка відправки форми
-      // Наприклад, через EmailJS, Formspree або ваш бекенд
-      
-      // Імітація відправки
       await new Promise(resolve => setTimeout(resolve, 1500))
-      
-      // В реальному додатку розкоментуйте це:
-      /*
+    
       const response = await fetch('https://your-backend.com/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -90,12 +84,10 @@ const Footer = () => {
       })
       
       if (!response.ok) throw new Error('Failed to send')
-      */
       
       setSubmitStatus('success')
       setFormData({ name: '', email: '', message: '' })
       
-      // Автоматично сховати повідомлення про успіх через 5 секунд
       setTimeout(() => setSubmitStatus(null), 5000)
       
     } catch (error) {
@@ -159,7 +151,7 @@ const Footer = () => {
                 <div className="text-xs text-white/50 mt-1 ml-1">* {translations.required}</div>
               </div>
               
-              {/* Статус відправки */}
+              {/* status */}
               {submitStatus === 'success' && (
                 <div className="p-3 bg-green-500/20 border border-green-500 rounded-lg flex items-center gap-2">
                   <FaCheckCircle className="w-5 h-5 text-green-400" />
@@ -196,7 +188,7 @@ const Footer = () => {
             </form>
           </div>
 
-          {/* Contact Info */}
+          {/* contact info */}
           <div>
             <div className="mb-8">
               <div className="flex items-center gap-3 mb-6">
@@ -262,15 +254,29 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Нижній блок */}
+        {/* lower */}
         <div className="border-t border-white/10 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
-                  <span className="font-bold text-white">RZK</span>
+              <div className="flex items-center gap-3 mb-4">
+                {/* logo text for image */}
+                <img 
+                  src="/images/logo.png" 
+                  alt="RZK Soft Logo" 
+                  className="h-12 w-auto" 
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const fallback = document.createElement('div');
+                    fallback.className = 'w-12 h-12 gradient-bg rounded-lg flex items-center justify-center';
+                    fallback.innerHTML = '<span class="font-bold text-white">RZK</span>';
+                    target.parentNode?.appendChild(fallback);
+                  }}
+                />
+                <div>
+                  <h4 className="text-xl font-bold">RZK Soft</h4>
+                  <p className="text-white/60 text-sm">Innovating Digital Solutions</p>
                 </div>
-                <h4 className="text-xl font-bold">RZK Soft</h4>
               </div>
               <p className="text-white/70">{translations.footerDesc}</p>
             </div>

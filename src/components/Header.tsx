@@ -44,9 +44,48 @@ const Header = () => {
     }`}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl md:text-3xl font-bold font-space-grotesk">RZK Soft</h1>
+          <a 
+            href="#home" 
+            className="flex items-center gap-3 group"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('home');
+            }}
+          >
+            {/* logo image */}
+            <div className="relative">
+              <img 
+                src="/images/logo.png" 
+                alt="RZK Soft Logo" 
+                className="h-10 w-auto transition-transform group-hover:scale-105"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const fallback = target.parentElement?.querySelector('.logo-fallback') as HTMLElement;
+                  if (fallback) {
+                    fallback.style.display = 'flex';
+                  }
+                }}
+              />
+              {/* faultbeck for logo */}
+              <div className="logo-fallback h-10 w-10 gradient-bg rounded-lg flex items-center justify-center" style={{ display: 'none' }}>
+                <span className="font-bold text-white text-lg">RZK</span>
+              </div>
+            </div>
+            
+            {/* logo text for pc */}
+            <div className="hidden md:block">
+              <span className="text-2xl font-bold font-space-grotesk bg-gradient-to-r from-brandCyan to-purple-500 bg-clip-text text-transparent">
+                RZK Soft
+              </span>
+              <p className="text-xs text-white/60 font-medium">Innovating Digital Solutions</p>
+            </div>
+          </a>
+          
+          
 
-          {/* Desktop Navigation */}
+
+          {/* desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
             <button onClick={() => scrollToSection('home')} className="nav-link">
               {translations.homePage}
@@ -64,7 +103,7 @@ const Header = () => {
               {translations.contactPage}
             </button>
 
-            {/* Language Selector */}
+            {/* language Selector */}
             <div className="language-selector">
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
@@ -87,7 +126,7 @@ const Header = () => {
                     <button
                       key={lang.code}
                       onClick={() => {
-                        setLanguage(lang.code as any) // cast to Language type
+                        setLanguage(lang.code as any) // to Language type
                         setIsLangMenuOpen(false)
                       }}
                       className={`language-option ${language === lang.code ? 'active' : ''}`}
@@ -101,7 +140,7 @@ const Header = () => {
             </div>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* mobile menu button */}
           <div className="md:hidden flex items-center gap-3">
             <div className="relative">
               <button
@@ -149,7 +188,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* mobile menu */}
         <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''} md:hidden`}>
           <div className="flex flex-col space-y-4 mt-8">
             <button onClick={() => scrollToSection('home')} className="nav-link text-lg">
