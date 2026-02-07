@@ -46,15 +46,15 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-brandCyan mb-2">24/7</div>
-              <div className="text-white/60">Support</div>
+              <div className="text-white/60">{translations.support}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-brandCyan mb-2">100%</div>
-              <div className="text-white/60">Satisfaction</div>
+              <div className="text-white/60">{translations.satisfaction}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-brandCyan mb-2">2+</div>
-              <div className="text-white/60">Years Experience</div>
+              <div className="text-white/60">{translations.yearsExperience}</div>
             </div>
           </div>
         </div>

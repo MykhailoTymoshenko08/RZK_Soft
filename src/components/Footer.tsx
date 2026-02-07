@@ -275,7 +275,7 @@ const Footer = () => {
                 />
                 <div>
                   <h4 className="text-xl font-bold">RZK Soft</h4>
-                  <p className="text-white/60 text-sm">Innovating Digital Solutions</p>
+                  <p className="text-white/60 text-sm">{translations.companyTagline}</p>
                 </div>
               </div>
               <p className="text-white/70">{translations.footerDesc}</p>

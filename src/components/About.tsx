@@ -51,28 +51,28 @@ const About = () => {
         <div className="mt-16 custom-card p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold mb-4">Why Choose RZK Soft?</h3>
+              <h3 className="text-2xl font-bold mb-4">{translations.whyChooseTitle}</h3>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-brandCyan rounded-full"></div>
-                  <span>Expert team with diverse skill sets</span>
+                  <span>{translations.whyChoose1}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-brandCyan rounded-full"></div>
-                  <span>Cutting-edge technology stack</span>
+                  <span>{translations.whyChoose2}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-brandCyan rounded-full"></div>
-                  <span>Agile development methodology</span>
+                  <span>{translations.whyChoose3}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-brandCyan rounded-full"></div>
-                  <span>Transparent communication</span>
+                  <span>{translations.whyChoose4}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-brandCyan rounded-full"></div>
-                  <span>Competitive pricing</span>
-                </li>
+                  <span>{translations.whyChoose5}</span>
+                </li> 
               </ul>
             </div>
             <div className="bg-gradient-to-br from-brandCyan/20 to-purple-600/20 rounded-xl p-8">

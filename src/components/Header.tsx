@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const Header = () => {
   const { language, setLanguage, translations } = useLanguage()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const languages = [
     { code: 'en', name: 'English', flag: '/images/enLang.png' },
@@ -16,6 +20,34 @@ const Header = () => {
   ]
 
   const scrollToSection = (id: string) => {
+
+    if (location.pathname !== '/') {
+      navigate('/')
+      setTimeout(() => {
+        const element = document.getElementById(id)
+        if (element) {
+          const headerOffset = 80
+          const elementPosition = element.getBoundingClientRect().top
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          })
+        }
+      }, 100)
+    } else{
+      const element = document.getElementById(id)
+      if (element) {
+        const headerOffset = 80
+        const elementPosition = element.getBoundingClientRect().top
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        })
+      }
+    }
     const element = document.getElementById(id)
     if (element) {
       const headerOffset = 80
