@@ -7,7 +7,6 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
   const navigate = useNavigate()
   const location = useLocation()
 
