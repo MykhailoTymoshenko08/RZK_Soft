@@ -19,9 +19,10 @@ const Header = () => {
   ]
 
   const scrollToSection = (id: string) => {
-
+    // Якщо ми не на головній сторінці, спочатку переходимо на головну
     if (location.pathname !== '/') {
       navigate('/')
+      // Чекаємо трохи часу, щоб сторінка встигла завантажитись
       setTimeout(() => {
         const element = document.getElementById(id)
         if (element) {
@@ -34,7 +35,8 @@ const Header = () => {
           })
         }
       }, 100)
-    } else{
+    } else {
+      // Якщо ми вже на головній сторінці, просто скролимо
       const element = document.getElementById(id)
       if (element) {
         const headerOffset = 80
@@ -47,17 +49,11 @@ const Header = () => {
         })
       }
     }
-    const element = document.getElementById(id)
-    if (element) {
-      const headerOffset = 80
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+    setIsMobileMenuOpen(false)
+  }
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      })
-    }
+  const navigateToNews = () => {
+    navigate('/news')
     setIsMobileMenuOpen(false)
   }
 
@@ -76,11 +72,12 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex justify-between items-center">
           <a 
-            href="#home" 
+            href="/" 
             className="flex items-center gap-3 group"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('home');
+              navigate('/');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
             {/* logo image */}
@@ -98,13 +95,13 @@ const Header = () => {
                   }
                 }}
               />
-              {/* faultbeck for logo */}
+              {/* fallback for logo */}
               <div className="logo-fallback h-10 w-10 gradient-bg rounded-lg flex items-center justify-center" style={{ display: 'none' }}>
                 <span className="font-bold text-white text-lg">RZK</span>
               </div>
             </div>
             
-            {/* logo text for pc */}
+            {/* logo text for desktop */}
             <div className="hidden md:block">
               <span className="text-2xl font-bold font-space-grotesk bg-gradient-to-r from-brandCyan to-purple-500 bg-clip-text text-transparent">
                 RZK Soft
@@ -113,28 +110,63 @@ const Header = () => {
             </div>
           </a>
           
-          
-
-
           {/* desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
-            <button onClick={() => scrollToSection('home')} className="nav-link">
+            <button onClick={() => {
+              if (location.pathname !== '/') {
+                navigate('/');
+                setTimeout(() => scrollToSection('home'), 100);
+              } else {
+                scrollToSection('home');
+              }
+            }} className="nav-link">
               {translations.homePage}
             </button>
-            <button onClick={() => scrollToSection('about')} className="nav-link">
+            <button onClick={() => {
+              if (location.pathname !== '/') {
+                navigate('/');
+                setTimeout(() => scrollToSection('about'), 100);
+              } else {
+                scrollToSection('about');
+              }
+            }} className="nav-link">
               {translations.aboutUsPage}
             </button>
-            <button onClick={() => scrollToSection('services')} className="nav-link">
+            <button onClick={() => {
+              if (location.pathname !== '/') {
+                navigate('/');
+                setTimeout(() => scrollToSection('services'), 100);
+              } else {
+                scrollToSection('services');
+              }
+            }} className="nav-link">
               {translations.servicesPage}
             </button>
-            <button onClick={() => scrollToSection('team')} className="nav-link">
+            <button onClick={() => {
+              if (location.pathname !== '/') {
+                navigate('/');
+                setTimeout(() => scrollToSection('team'), 100);
+              } else {
+                scrollToSection('team');
+              }
+            }} className="nav-link">
               {translations.teamPage}
             </button>
-            <button onClick={() => scrollToSection('contact')} className="nav-link">
+            <button onClick={() => navigateToNews()} className="nav-link">
+              News
+            </button>
+            <button onClick={() => {
+              if (location.pathname !== '/') {
+                navigate('/');
+                setTimeout(() => scrollToSection('contact'), 100);
+              } else {
+                scrollToSection('contact');
+              }
+            }} className="nav-link">
               {translations.contactPage}
             </button>
 
-            {/* language Selector */}
+            {/* Language Selector */}
             <div className="language-selector">
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
@@ -157,7 +189,7 @@ const Header = () => {
                     <button
                       key={lang.code}
                       onClick={() => {
-                        setLanguage(lang.code as any) // to Language type
+                        setLanguage(lang.code as any)
                         setIsLangMenuOpen(false)
                       }}
                       className={`language-option ${language === lang.code ? 'active' : ''}`}
@@ -219,22 +251,58 @@ const Header = () => {
           </div>
         </div>
 
-        {/* mobile menu */}
+        {/* mobile menu - оновлено з кращим фоном та хрестиком */}
         <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''} md:hidden`}>
-          <div className="flex flex-col space-y-4 mt-8">
-            <button onClick={() => scrollToSection('home')} className="nav-link text-lg">
+          <div className="absolute top-4 right-4">
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="p-2 rounded-lg border border-white/20 hover:bg-white/10"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div className="flex flex-col space-y-4 mt-12">
+            <button onClick={() => {
+              navigate('/');
+              setIsMobileMenuOpen(false);
+              setTimeout(() => scrollToSection('home'), 100);
+            }} className="nav-link text-lg">
               {translations.homePage}
             </button>
-            <button onClick={() => scrollToSection('about')} className="nav-link text-lg">
+            <button onClick={() => {
+              navigate('/');
+              setIsMobileMenuOpen(false);
+              setTimeout(() => scrollToSection('about'), 100);
+            }} className="nav-link text-lg">
               {translations.aboutUsPage}
             </button>
-            <button onClick={() => scrollToSection('services')} className="nav-link text-lg">
+            <button onClick={() => {
+              navigate('/');
+              setIsMobileMenuOpen(false);
+              setTimeout(() => scrollToSection('services'), 100);
+            }} className="nav-link text-lg">
               {translations.servicesPage}
             </button>
-            <button onClick={() => scrollToSection('team')} className="nav-link text-lg">
+            <button onClick={() => {
+              navigate('/');
+              setIsMobileMenuOpen(false);
+              setTimeout(() => scrollToSection('team'), 100);
+            }} className="nav-link text-lg">
               {translations.teamPage}
             </button>
-            <button onClick={() => scrollToSection('contact')} className="nav-link text-lg">
+            <button onClick={() => {
+              navigateToNews();
+              setIsMobileMenuOpen(false);
+            }} className="nav-link text-lg">
+              News
+            </button>
+            <button onClick={() => {
+              navigate('/');
+              setIsMobileMenuOpen(false);
+              setTimeout(() => scrollToSection('contact'), 100);
+            }} className="nav-link text-lg">
               {translations.contactPage}
             </button>
           </div>
