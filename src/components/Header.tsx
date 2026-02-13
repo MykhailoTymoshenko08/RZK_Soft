@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { BsTranslate } from 'react-icons/bs'
 
 const Header = () => {
   const { language, setLanguage, translations } = useLanguage()
@@ -101,7 +102,7 @@ const Header = () => {
                 <span className="text-2xl font-bold font-space-grotesk bg-gradient-to-r from-brandCyan to-purple-500 bg-clip-text text-transparent">
                   RZK Soft
                 </span>
-                <p className="text-xs text-white/60 font-medium">Innovating Digital Solutions</p>
+                <p className="text-xs text-white/60 font-medium">{translations.companyTagline}</p>
               </div>
             </a>
             
@@ -147,7 +148,7 @@ const Header = () => {
                 {translations.teamPage}
               </button>
               <button onClick={() => navigateToNews()} className="nav-link">
-                News
+                {translations.newsPage}
               </button>
               <button onClick={() => {
                 if (location.pathname !== '/') {
@@ -245,15 +246,13 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Мобільне меню - ВИНЕСЕНЕ ПОЗА HEADER */}
       <div className={`md:hidden fixed inset-0 z-[100] ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
-        {/* Затемнений фон */}
         <div 
           className="absolute inset-0 bg-black/70 backdrop-blur-sm"
           onClick={() => setIsMobileMenuOpen(false)}
         />
         
-        {/* Контейнер меню */}
+        {/*menu container */}
         <div className="absolute top-0 right-0 h-full w-3/4 max-w-sm bg-brandDark border-l border-white/10">
           <div className="p-6 h-full">
             <div className="absolute top-4 right-4">
@@ -300,7 +299,7 @@ const Header = () => {
                 navigateToNews();
                 setIsMobileMenuOpen(false);
               }} className="nav-link text-lg text-left">
-                News
+                {translations.newsPage}
               </button>
               <button onClick={() => {
                 navigate('/');
