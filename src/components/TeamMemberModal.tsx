@@ -22,14 +22,25 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
       diplomasAwards: "Diplomas & Awards",
       viewCertificate: "View Certificate",
       viewOnGitHub: "View on GitHub",
-      aiPython: "AI/Python",
-      webDevelopment: "Web Development",
-      programmingLanguages: "Programming Languages",
-      toolsPlatforms: "Tools & Platforms",
-      other: "Other",
       showMore: "Show more",
       showLess: "Show less",
-      certificates: "certificates"
+      certificates: "certificates",
+      // skill categories
+      programmingLanguages: "Programming Languages",
+      csFundamentals: "CS Fundamentals",
+      aiML: "AI & Machine Learning",
+      mobileDev: "Mobile Development",
+      webDevelopment: "Web Development",
+      databases: "Databases",
+      devops: "DevOps & Infrastructure",
+      dataEngineering: "Data Engineering",
+      qa: "QA & Testing",
+      gameDev: "Game Development",
+      design: "Design & UX",
+      management: "Management & Tools",
+      softSkills: "Soft Skills",
+      languages: "Languages",
+      other: "Other"
     },
     uk: {
       techStack: "Технології",
@@ -37,14 +48,24 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
       diplomasAwards: "Дипломи та нагороди",
       viewCertificate: "Переглянути сертифікат",
       viewOnGitHub: "Переглянути на GitHub",
-      aiPython: "AI/Python",
-      webDevelopment: "Веб-розробка",
-      programmingLanguages: "Мови програмування",
-      toolsPlatforms: "Інструменти та платформи",
-      other: "Інше",
       showMore: "Показати ще",
       showLess: "Показати менше",
-      certificates: "сертифікатів"
+      certificates: "сертифікатів",
+      aiML: "AI та машинне навчання",
+      mobileDev: "Мобільна розробка",
+      webDevelopment: "Веб-розробка",
+      databases: "Бази даних",
+      devops: "DevOps та інфраструктура",
+      qa: "QA та тестування",
+      programmingLanguages: "Мови програмування",
+      csFundamentals: "Основи CS",
+      design: "Дизайн та UX",
+      dataEngineering: "Data Engineering",
+      gameDev: "Розробка ігор",
+      management: "Менеджмент та інструменти",
+      softSkills: "Soft Skills",
+      languages: "Мови",
+      other: "Інше"
     },
     es: {
       techStack: "Tecnologías",
@@ -52,14 +73,24 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
       diplomasAwards: "Diplomas y Premios",
       viewCertificate: "Ver Certificado",
       viewOnGitHub: "Ver en GitHub",
-      aiPython: "AI/Python",
-      webDevelopment: "Desarrollo Web",
-      programmingLanguages: "Lenguajes de Programación",
-      toolsPlatforms: "Herramientas y Plataformas",
-      other: "Otro",
       showMore: "Mostrar más",
       showLess: "Mostrar menos",
-      certificates: "certificados"
+      certificates: "certificados",
+      aiML: "IA y Machine Learning",
+      mobileDev: "Desarrollo Móvil",
+      webDevelopment: "Desarrollo Web",
+      databases: "Bases de Datos",
+      devops: "DevOps e Infraestructura",
+      qa: "QA y Testing",
+      programmingLanguages: "Lenguajes de Programación",
+      csFundamentals: "Fundamentos de CS",
+      design: "Diseño y UX",
+      dataEngineering: "Ingeniería de Datos",
+      gameDev: "Desarrollo de Juegos",
+      management: "Gestión y Herramientas",
+      softSkills: "Habilidades Blandas",
+      languages: "Idiomas",
+      other: "Otro"
     },
     de: {
       techStack: "Tech Stack",
@@ -67,14 +98,24 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
       diplomasAwards: "Diplome und Auszeichnungen",
       viewCertificate: "Zertifikat Anzeigen",
       viewOnGitHub: "Auf GitHub Anzeigen",
-      aiPython: "AI/Python",
-      webDevelopment: "Webentwicklung",
-      programmingLanguages: "Programmiersprachen",
-      toolsPlatforms: "Tools und Plattformen",
-      other: "Andere",
       showMore: "Mehr anzeigen",
       showLess: "Weniger anzeigen",
-      certificates: "Zertifikate"
+      certificates: "Zertifikate",
+      aiML: "KI & Machine Learning",
+      mobileDev: "Mobile Entwicklung",
+      webDevelopment: "Webentwicklung",
+      databases: "Datenbanken",
+      devops: "DevOps & Infrastruktur",
+      qa: "QA & Testing",
+      programmingLanguages: "Programmiersprachen",
+      csFundamentals: "CS Grundlagen",
+      design: "Design & UX",
+      dataEngineering: "Dateningenieurwesen",
+      gameDev: "Spieleentwicklung",
+      management: "Management & Tools",
+      softSkills: "Soziale Kompetenzen",
+      languages: "Sprachen",
+      other: "Andere"
     },
     nl: {
       techStack: "Tech Stack",
@@ -82,40 +123,201 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
       diplomasAwards: "Diploma's en Prijzen",
       viewCertificate: "Certificaat Bekijken",
       viewOnGitHub: "Bekijk op GitHub",
-      aiPython: "AI/Python",
-      webDevelopment: "Webontwikkeling",
-      programmingLanguages: "Programmeertalen",
-      toolsPlatforms: "Tools en Platforms",
-      other: "Overig",
       showMore: "Meer tonen",
       showLess: "Minder tonen",
-      certificates: "certificaten"
+      certificates: "certificaten",
+      aiML: "AI & Machine Learning",
+      mobileDev: "Mobiele Ontwikkeling",
+      webDevelopment: "Webontwikkeling",
+      databases: "Databases",
+      devops: "DevOps & Infrastructuur",
+      qa: "QA & Testing",
+      programmingLanguages: "Programmeertalen",
+      csFundamentals: "CS Fundamenten",
+      design: "Design & UX",
+      dataEngineering: "Data Engineering",
+      gameDev: "Game Ontwikkeling",
+      management: "Beheer & Tools",
+      softSkills: "Zachte Vaardigheden",
+      languages: "Talen",
+      other: "Overig"
     }
   }
 
   const currentTranslations = (translations as any)[language] || translations.en
 
   const categorizeSkills = (skills: string[]) => {
+    const t = currentTranslations
     const categories: Record<string, string[]> = {
-      [currentTranslations.aiPython]: [],
-      [currentTranslations.webDevelopment]: [],
-      [currentTranslations.programmingLanguages]: [],
-      [currentTranslations.toolsPlatforms]: [],
-      [currentTranslations.other]: []
+      [t.programmingLanguages]: [],
+      [t.csFundamentals]: [],
+      [t.aiML]: [],
+      [t.webDevelopment]: [],
+      [t.mobileDev]: [],
+      [t.databases]: [],
+      [t.devops]: [],
+      [t.dataEngineering]: [],
+      [t.qa]: [],
+      [t.gameDev]: [],
+      [t.design]: [],
+      [t.management]: [],
+      [t.softSkills]: [],
+      [t.languages]: [],
+      [t.other]: []
     }
 
     skills.forEach((skill: string) => {
-      const lowerSkill = skill.toLowerCase()
-      if (lowerSkill.includes('python') || lowerSkill.includes('analytical skills') || lowerSkill.includes('llm') || lowerSkill.includes('machine learning')) {
-        categories[currentTranslations.aiPython].push(skill)
-      } else if (lowerSkill.includes('react') || lowerSkill.includes('javascript') || lowerSkill.includes('typescript') || lowerSkill.includes('next') || lowerSkill.includes('tailwind css') || lowerSkill.includes('graphql') || lowerSkill.includes('redux') || lowerSkill.includes('html') || lowerSkill.includes('css')  || lowerSkill.includes('web')) {
-        categories[currentTranslations.webDevelopment].push(skill)
-      } else if (lowerSkill.includes('java') || lowerSkill.includes('c++') || lowerSkill.includes('c (programming language)') || lowerSkill.includes('assembly') || lowerSkill.includes('typescript') || lowerSkill.includes('sql')) {
-        categories[currentTranslations.programmingLanguages].push(skill)
-      } else if (lowerSkill.includes('docker') || lowerSkill.includes('git') || lowerSkill.includes('linux') || lowerSkill.includes('postgresql') || lowerSkill.includes('redis') || lowerSkill.includes('openrouter api') || lowerSkill.includes('cloud')) {
-        categories[currentTranslations.toolsPlatforms].push(skill)
+      const s = skill.toLowerCase()
+
+      // 1. Programming Languages — конкретні мови
+      if (
+        s === 'java' || (s.includes('java') && !s.includes('javascript')) ||
+        s.includes('c++') || s.includes('c#') || s.includes('с#') ||
+        s === 'c' || s.includes('c (programming') ||
+        s.includes('assembly') || s.includes('rust') || s.includes('php') ||
+        s.includes('ruby') || s.includes('scala') || s.includes('kotlin') ||
+        s.includes('swift') || s.includes('typescript') || s.includes('javascript') && !s.includes('react') && !s.includes('next') ||
+        s === 'python' || s.startsWith('python (')
+      ) {
+        categories[t.programmingLanguages].push(skill)
+
+      // 2. CS Fundamentals — теорія, архітектура, алгоритми
+      } else if (
+        s.includes('clean architecture') || s.includes('architecture') ||
+        s.includes('object-oriented') || s.includes('oop') ||
+        s.includes('analysis of algorithm') || s.includes('algorithmic') ||
+        s.includes('discrete math') || s.includes('data structure') ||
+        s.includes('design pattern') || s.includes('solid') ||
+        s.includes('refactor') || s.includes('programming') ||
+        s.includes('mathematical thinking') || s.includes('math')
+      ) {
+        categories[t.csFundamentals].push(skill)
+
+      // 3. AI & Machine Learning
+      } else if (
+        s.includes('langchain') || s.includes('langgraph') ||
+        s.includes('llamaindex') || s.includes('machine learning') || s.includes('llm') ||
+        s.includes('rag') || s.includes('openrouter') || s.includes('chromadb') ||
+        s.includes('tavily') || s.includes('streamlit') || s.includes('fastapi') ||
+        s.includes('aiogram') || s.includes('tensorflow') || s.includes('opencv') ||
+        s.includes('pydantic') || s.includes('asyncio') || s.includes('bs4') ||
+        s.includes('beautifulsoup') || s.includes('ai integration') ||
+        s.includes('openai') || s.includes('hugging face') || s.includes('transformers') ||
+        s.includes('selenium') && s.includes('python') ||
+        s.includes('analytical skills')
+      ) {
+        categories[t.aiML].push(skill)
+
+      // 4. Mobile Development (перед Web щоб React Native не потрапив у Web)
+      } else if (
+        s.includes('react native') || s.includes('flutter') || s.includes('jetpack') ||
+        s.includes('android') || s.includes('ios') || s.includes('xamarin') ||
+        s.includes('expo') || s.includes('cross-platform') || s.includes('firebase') ||
+        s.includes('backend integration') || s.includes('ui/ux implementation')
+      ) {
+        categories[t.mobileDev].push(skill)
+
+      // 5. Web Development
+      } else if (
+        s.includes('react') || s.includes('next.js') || s.includes('vue') ||
+        s.includes('angular') || s.includes('html') || s.includes('css') ||
+        s.includes('javascript') || s.includes('tailwind') ||
+        s.includes('redux') || s.includes('graphql') || s.includes('webpack') ||
+        s.includes('vite') || s.includes('responsive design') ||
+        s.includes('unit testing') || s.includes('jest') ||
+        s.includes('web development') || s.includes('web')
+      ) {
+        categories[t.webDevelopment].push(skill)
+
+      // 6. Databases
+      } else if (
+        s === 'sql' || s.startsWith('sql (') || s.includes('postgresql') ||
+        s.includes('sqlite') || s.includes('redis') || s.includes('bigquery') ||
+        s.includes('mongodb') || s.includes('mysql') || s.includes('database')
+      ) {
+        categories[t.databases].push(skill)
+
+      // 7. DevOps & Infrastructure
+      } else if (
+        s.includes('docker') || s.includes('linux') || s.includes('ci/cd') ||
+        s.includes('bash') || s.includes('kubernetes') || s.includes('cloud') ||
+        s.includes('aws') || s.includes('git') || s.includes('arduino') ||
+        s.includes('airflow') || s.includes('nginx') || s.includes('terraform') ||
+        s.includes('monitoring') || s.includes('devops') ||
+        s.includes('computer networking')
+      ) {
+        categories[t.devops].push(skill)
+
+      // 8. Data Engineering
+      } else if (
+        s.includes('etl') || s.includes('data model') || s.includes('data clean') ||
+        s.includes('data engineer') || s.includes('analytics') ||
+        s.includes('data warehousing') || s.includes('pipeline') ||
+        s.includes('big data') || s.includes('tableau') || s.includes('power bi')
+      ) {
+        categories[t.dataEngineering].push(skill)
+
+      // 9. QA & Testing
+      } else if (
+        s.includes('testing') || s.includes('test case') || s.includes('bug tracking') ||
+        s.includes('cypress') || s.includes('regression') || s.includes('api testing') ||
+        s.includes('quality assurance') || s.includes('qa') || s.includes('e2e') ||
+        s.includes('selenium') || s.includes('performance testing')
+      ) {
+        categories[t.qa].push(skill)
+
+      // 10. Game Development
+      } else if (
+        s.includes('unity') || s.includes('game') || s.includes('unreal') ||
+        s.includes('godot') || s.includes('level design') || s.includes('blender')
+      ) {
+        categories[t.gameDev].push(skill)
+
+      // 11. Design & UX
+      } else if (
+        s.includes('figma') || s.includes('adobe xd') || s.includes('sketch') ||
+        s.includes('wireframing') || s.includes('prototyping') ||
+        s.includes('user research') || s.includes('user testing') ||
+        s.includes('interaction design') || s.includes('design system') ||
+        s.includes('ui/ux') || s.includes('illustration') ||
+        s.includes('canva') || s.includes('storyboarding') ||
+        s.includes('player experience')
+      ) {
+        categories[t.design].push(skill)
+
+      // 12. Management & Tools
+      } else if (
+        s.includes('jira') || s.includes('trello') || s.includes('n8n') ||
+        s.includes('agile') || s.includes('scrum') || s.includes('roadmap') ||
+        s.includes('project management') || s.includes('stakeholder') ||
+        s.includes('requirements') || s.includes('prioritiz') ||
+        s.includes('team coordination') || s.includes('team leadership') ||
+        s.includes('planning')
+      ) {
+        categories[t.management].push(skill)
+
+      // 13. Soft Skills
+      } else if (
+        s.includes('teamwork') || s.includes('communication') ||
+        s.includes('problem solving') || s.includes('critical thinking') ||
+        s.includes('collaboration') || s.includes('fast learning') ||
+        s.includes('analytical')
+      ) {
+        categories[t.softSkills].push(skill)
+
+      // 14. Human Languages
+      } else if (
+        s.includes('english') || s.includes('ukrainian') || s.includes('russian') ||
+        s.includes('spanish') || s.includes('polish') || s.includes('german') ||
+        s.includes('french') || s.includes('chinese') || s.includes('japanese') ||
+        s.includes('arabic') || s.includes('portuguese') || s.includes('dutch') ||
+        /\([a-z][1-9]\)/.test(s) || s.includes('native') || s.includes('(native)')
+      ) {
+        categories[t.languages].push(skill)
+
+      // 15. Other
       } else {
-        categories[currentTranslations.other].push(skill)
+        categories[t.other].push(skill)
       }
     })
 

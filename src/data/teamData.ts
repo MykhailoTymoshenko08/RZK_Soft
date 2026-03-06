@@ -32,9 +32,12 @@ export const teamData: TeamMember[] = [
       "Docker",
       "C++", 
       "Assembly", 
+      "Clean Architecture",
+      "Problem Solving",
       "Java",
       "AI Integration",
       "SQL",
+      "Fast Learning",
       "Tailwind CSS",
       "OpenRouter API",
       "TypeScript",
@@ -52,8 +55,9 @@ export const teamData: TeamMember[] = [
       "English (C1)",
       "Russian (Native)",
       "Ukrainian (Native)",
-      "Spanish",
-      "Polish",
+      "Spanish (B2)",
+      "Polish (B1)",
+      "French (B1)",
       "React.js", 
       "Git", 
       "GitHub", 
@@ -124,80 +128,73 @@ export const teamData: TeamMember[] = [
       {
         title: "Award in Medical Research (Luc)",
         link: "https://drive.google.com/file/d/1ZHMVKJRZjCJ8OBKwbtd_A8vUJE-IU0r3/view?usp=sharing"
-      },
-      // {
-      //   title: "Certificate in Volleyball",
-      //   link: "https://drive.google.com/file/d/1Zok1v9ZrwcvOGy4pORNu5z-MhgRnd0Rb/view?usp=sharing"
-      // },
-      // {
-      //   title: "Certificate in Chemistry & Biology Summer School",
-      //   link: "https://drive.google.com/file/d/1r2JfcI9_FNVAMkCYb9izLaU2H7Ik0RB-/view?usp=sharing"
-      // },
-      // {
-      //   title: "Diploma in Biology",
-      //   link: "https://drive.google.com/file/d/1Pkp66WUHfUPnWESSvdsG6GZytmnO_Xu-/view?usp=sharing"
-      // },
-      // {
-      //   title: "Diploma in English",
-      //   link: "https://drive.google.com/file/d/1ztvO1pTspzoNMGui8D5EMB1r2S3h6nCw/view?usp=sharing"
-      // },
-      // {
-      //   title: "Award in Biology",
-      //   link: "https://drive.google.com/file/d/13MQRCwGbVSpS4YEc2SJ7Qa0rLhhTeB_5/view?usp=sharing"
-      // },
-      // {
-      //   title: "Award in Chemistry",
-      //   link: "https://drive.google.com/file/d/11mQpxcG2fWaY7FR9R1qDGybuCDdaV7c0/view?usp=sharing"
-      // },
-      // {
-      //   title: "Diploma in Biology (NU)",
-      //   link: "https://drive.google.com/file/d/1B473DcH0ILooV6-izHWN1op1E8F39Pgd/view?usp=sharing"
-      // },
-      // {
-      //   title: "Diploma in Chemistry (NU)",
-      //   link: "https://drive.google.com/file/d/1c0uREm23oIBVYmDYLNcMjI3unTQnrAtC/view?usp=sharing"
-      // },
-      // {
-      //   title: "Award in English",
-      //   link: "https://drive.google.com/file/d/1niLpbN_kiK7KfCFyLc4Qom23IOjggqXe/view?usp=sharing"
-      // },
-      // {
-      //   title: "Award in History",
-      //   link: "https://drive.google.com/file/d/1XL6Ld0ygRuYHqmOFcE73Xun9HR1bi0u3/view?usp=sharing"
-      // },
-      // {
-      //   title: "Military Award I",
-      //   link: "https://drive.google.com/file/d/1h7iJdOLIb9w9uhkZv1MSgGvPA4C9tkjN/view?usp=sharing"
-      // },
-      // {
-      //   title: "Military Award II",
-      //   link: "https://drive.google.com/file/d/1-oN22wAd3ZoovL9vCgHN0TGSwyEXBDOi/view?usp=sharing"
-      // },
-      // {
-      //   title: "Award in Ukrainian Language",
-      //   link: "https://drive.google.com/file/d/1NeitTy3jqv3i3ETvoSTguSD9N1p0uDFn/view?usp=sharing"
-      // },
-      // {
-      //   title: "Taekwondo Grade 5 Certificate",
-      //   link: "https://drive.google.com/file/d/1bnId1qNxJV-LVZtWyIkaoECQxNNPbchi/view?usp=sharing"
-      // },
-      // {
-      //   title: "Taekwondo Grade 6 Certificate",
-      //   link: "https://drive.google.com/file/d/1p9L8n8SI6-NVNx-wYeYxKGFYUYIuA2BL/view?usp=sharing"
-      // },
-      // {
-      //   title: "Taekwondo Grade 7 Certificate",
-      //   link: "https://drive.google.com/file/d/1p9-NeBWxQXva56spMjQ7S8HSTDTshCou/view?usp=sharing"
-      // },
-      // {
-      //   title: "Taekwondo Grade 8 Certificate",
-      //   link: "https://drive.google.com/file/d/1lrLl8BSJX9tOYMQXCXEmYBka-BBLf_sG/view?usp=sharing"
-      // }
+      }
     ]
   },
-
   {
     id: 2,
+    name: "Mykhailo Haliapa",
+    role: "Junior Developer (C/JavaScript) & COO",
+    avatar: "/images/team/mykhailo_haliapa.jpg",
+    skills: [
+      "React.js", 
+      "C++",
+      "Python(json, pydantic, asyncio)",
+      "OOP(Object-Oriented Programming)",
+      "PostgreSQL",
+      "C (programming language)", 
+      "Git", 
+      "GitHub", 
+      "HTML & CSS", 
+      "JavaScript", 
+      "English (B2)",
+      "Russian (Native)",
+      "Ukrainian (Native)",
+      "Polish (B2)",
+      "Spanish (B1)",
+      "Figma", 
+      "Project Management",
+      "Team Leadership"
+    ],
+    socials: {
+      github: "https://github.com/morgonets",
+      instagram: "https://www.instagram.com/misha.carasik_fortnite/"
+    },
+    projects: [
+      {
+        title: "To_Do_List_On_C",
+        description: "To-Do list where you can plan your day, change tasks, adding and remowing them.",
+        link: "https://github.com/morgonets/To_Do_List_On_C"
+      },
+      {
+        title: "Snake_Game_On_C",
+        description: "Just a regular snake game.",
+        link: "https://github.com/morgonets/Snake_Game_On_C"
+      },
+       {
+        title: "Matrix_Calculator_On_C",
+        description: "Matrix calculator that can count matrix 2x2 3x3 adding and sumbstruct them.",
+        link: "https://github.com/morgonets/Matrix_Calculator_On_C"
+      },
+      {
+        title: "Cliker_On_C",
+        description: "A simple clicker game built in C.",
+        link: "https://github.com/morgonets/Cliker_On_C"
+      },
+    ],
+    diplomas: [
+      {
+        title: "Business Management Certificate",
+        link: "#"
+      },
+      {
+        title: "Project Management Professional",
+        link: "#"
+      }
+    ]
+  },
+  {
+    id: 3,
     name: "Ivan Krutkevych",
     role: "AI Engineer & CTO",
     avatar: "/images/team/ivan_krutkevych.jpg",
@@ -212,6 +209,10 @@ export const teamData: TeamMember[] = [
       "Git",
       "GitHub",
       "Arduino",
+      "English (B2)",
+      "Russian (Native)",
+      "Ukrainian (Native)",
+      "German (B1)",
       "Object-Oriented Programming (OOP)",
       "Problem Solving",
       "Algorithmic Thinking",
@@ -248,9 +249,8 @@ export const teamData: TeamMember[] = [
       }
     ]
   },
-
   {
-    id: 3,
+    id: 4,
     name: "Volodymyr Lavrientiev",
     role: "Lead Mobile Developer",
     avatar: "/images/team/volodymyr_lavrientiev.jpg",
@@ -261,7 +261,9 @@ export const teamData: TeamMember[] = [
       "Android XML",
       "Firebase",
       "Backend Integration",
-      "AI Integration",
+      "English (C1)",
+      "Russian (Native)",
+      "Ukrainian (Native)",
       "Clean Architecture",
       "OOP",
       "Cross-Platform Development",
@@ -319,61 +321,6 @@ export const teamData: TeamMember[] = [
       }
     ]
   },
-
-  {
-    id: 4,
-    name: "Mykhailo Haliapa",
-    role: "Junior Developer (C/JavaScript)",
-    avatar: "/images/team/mykhailo_haliapa.jpg",
-    skills: [
-      "React.js", 
-      "C (programming language)", 
-      "Git", 
-      "GitHub", 
-      "HTML & CSS", 
-      "JavaScript", 
-      "Figma", 
-      "Project Management",
-      "Team Leadership"
-    ],
-    socials: {
-      github: "https://github.com/morgonets",
-      instagram: "https://www.instagram.com/misha.carasik_fortnite/"
-    },
-    projects: [
-      {
-        title: "To_Do_List_On_C",
-        description: "To-Do list where you can plan your day, change tasks, adding and remowing them.",
-        link: "https://github.com/morgonets/To_Do_List_On_C"
-      },
-      {
-        title: "Snake_Game_On_C",
-        description: "Just a regular snake game.",
-        link: "https://github.com/morgonets/Snake_Game_On_C"
-      },
-       {
-        title: "Matrix_Calculator_On_C",
-        description: "Matrix calculator that can count matrix 2x2 3x3 adding and sumbstruct them.",
-        link: "https://github.com/morgonets/Matrix_Calculator_On_C"
-      },
-      {
-        title: "Cliker_On_C",
-        description: "A simple clicker game built in C.",
-        link: "https://github.com/morgonets/Cliker_On_C"
-      },
-    ],
-    diplomas: [
-      {
-        title: "Business Management Certificate",
-        link: "#"
-      },
-      {
-        title: "Project Management Professional",
-        link: "#"
-      }
-    ]
-  },
-
   {
     id: 5,
     name: "Oleh Shevchenko",
@@ -410,128 +357,8 @@ export const teamData: TeamMember[] = [
       }
     ]
   },
-
   {
-  id: 6,
-  name: "Hiro Tanaka",
-  role: "Game Designer",
-  avatar: "/images/team/hiro_tanaka.jpg",
-  skills: [
-    "Game Mechanics Design",
-    "Level Design",
-    "Storyboarding",
-    "Unity",
-    "C#",
-    "Prototyping",
-    "Player Experience Analysis"
-  ],
-  socials: {
-    linkedin: "https://linkedin.com/in/hiro-tanaka",
-    instagram: ""
-  },
-  projects: [
-    {
-      title: "Fantasy RPG Prototype",
-      description: "Designed levels, mechanics, and story flow for mobile and PC platforms",
-      link: "#"
-    },
-    {
-      title: "Puzzle Adventure Game",
-      description: "Prototyped unique puzzle mechanics with engaging player interactions",
-      link: "#"
-    }
-  ],
-  diplomas: [
-    {
-      title: "Best Game Design Award – Indie Game Jam 2025",
-      link: "#"
-    }
-  ]
-  },
-
-  {
-    id: 7,
-    name: "Anastasiya Kovalenko",
-    role: "Frontend Developer",
-    avatar: "/images/team/anastasiya_kovalenko.jpg",
-    skills: [
-      "React.js",
-      "TypeScript",
-      "Next.js",
-      "HTML & CSS",
-      "JavaScript",
-      "Redux",
-      "Tailwind CSS",
-      "Responsive Design",
-      "Unit Testing (Jest)"
-    ],
-    socials: {
-      instagram: "",
-      linkedin: "https://www.linkedin.com/in/anastasiya-kovalenko-11a415298/?originalSubdomain=uk"
-    },
-    projects: [
-      {
-        title: "E-Learning Platform",
-        description: "Developed interactive frontend with React & TypeScript, including quizzes and dashboards",
-        link: "#"
-      },
-      {
-        title: "Startup Landing Page",
-        description: "Built responsive landing page with Tailwind CSS and Next.js",
-        link: "#"
-      }
-    ],
-    diplomas: [
-      {
-        title: "Certificate in Advanced Frontend Development",
-        link: "#"
-      }
-    ]
-  },
-
-  {
-    id: 8,
-    name: "Sofiya Shapialevich",
-    role: "Data Engineer",
-    avatar: "/images/team/sofiya_shapialevich.jpg",
-    skills: [
-      "Python",
-      "SQL",
-      "PostgreSQL",
-      "ETL Pipelines",
-      "Airflow",
-      "Data Modeling",
-      "BigQuery",
-      "Data Warehousing",
-      "Data Cleaning",
-      "Analytics"
-    ],
-    socials: {
-      linkedin: "https://linkedin.com/in/sophiya-shovvicka",
-      instagram: ""
-    },
-    projects: [
-      {
-        title: "Sales Analytics Pipeline",
-        description: "Built ETL pipelines and dashboards to provide actionable insights for e-commerce platform",
-        link: "#"
-      },
-      {
-        title: "IoT Sensor Data Platform",
-        description: "Aggregated and processed sensor data for real-time analytics and monitoring",
-        link: "#"
-      }
-    ],
-    diplomas: [
-      {
-        title: "Certified Data Engineer (Google Cloud)",
-        link: "#"
-      }
-    ]
-  },
-
-  {
-    id: 10,
+    id: 6,
     name: "Anya Malykhina",
     role: "Lead UI/UX Designer",
     avatar: "/images/team/anya_malykhina.jpg",
@@ -567,84 +394,6 @@ export const teamData: TeamMember[] = [
       }
     ]
   },
-
-  {
-    id: 11,
-    name: "Katherina Beregova",
-    role: "UI/UX Designer",
-    avatar: "",
-    skills: [
-      "Figma",
-      "Sketch",
-      "Prototyping",
-      "Wireframing",
-      "User Testing",
-      "Design Systems",
-      "Interaction Design",
-      "Illustration"
-    ],
-    socials: {
-      instagram: ""
-    },
-    projects: [
-      {
-        title: "Campus Events App",
-        description: "Designed UI/UX for mobile app to manage and track student events",
-        link: "#"
-      },
-      {
-        title: "E-Learning Platform Prototype",
-        description: "Created interactive prototypes for online learning modules",
-        link: "#"
-      }
-    ],
-    diplomas: [
-      {
-        title: "Certificate in UI/UX Design – EdEra 2025",
-        link: "#"
-      }
-    ]
-  },
-
-  {
-    id: 9,
-    name: "Katherina Bondar",
-    role: "Product Manager",
-    avatar: "/images/team/katherina_bondar.jpg",
-    skills: [
-      "Agile / Scrum",
-      "Jira",
-      "Roadmapping",
-      "Requirements Gathering",
-      "Prioritization",
-      "Team Coordination",
-      "Wireframing",
-      "Stakeholder Communication"
-    ],
-    socials: {
-      linkedin: "https://linkedin.com/in/kateryna-bondar",
-      instagram: ""
-    },
-    projects: [
-      {
-        title: "Education App Launch",
-        description: "Managed cross-functional team to deliver educational mobile app on time",
-        link: "#"
-      },
-      {
-        title: "E-commerce Platform",
-        description: "Defined product roadmap and coordinated with engineering and design teams",
-        link: "#"
-      }
-    ],
-    diplomas: [
-      {
-        title: "Certified Scrum Product Owner (CSPO)",
-        link: "#"
-      }
-    ]
-  },
-
   {
     id: 7,
     name: "Dmytro Shevchuk",
@@ -681,5 +430,26 @@ export const teamData: TeamMember[] = [
         link: "#"
       }
     ]
-  }
+  },
+  {
+    id: 8,
+    name: "Olexii Tymoshenko",
+    role: "Intern",
+    avatar: "/images/team/olexii_tymoshenko.jpg",
+    skills: [
+      "Microcontroller Design",
+      "Assembly",
+      "Java",
+      "Kotlin",
+      "HTML & CSS",
+    ],
+    socials: {},
+    projects: [],
+    diplomas: [
+      {
+        title: "Certified Software Tester (ISTQB Foundation Level)",
+        link: "#"
+      }
+    ]
+  },
 ];
