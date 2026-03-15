@@ -47,12 +47,14 @@ export const teamData: TeamMember[] = [
       "Computer Networking",
       "Analysis of Algorithms",
       "Discrete Mathematics",
-      "Object-Oriented Programming(OOP)",
+      "Object-Oriented Programming(OOP)", "Analytical Skills",
       "Machine Learning",
       "Analytical Skills",
       "Teamwork",
       "Team Leadership",
       "English (C1)",
+      "Arduino",
+      "C (programming language)",
       "Russian (Native)",
       "Ukrainian (Native)",
       "Spanish (B2)",
@@ -128,6 +130,40 @@ export const teamData: TeamMember[] = [
       {
         title: "Award in Medical Research (Luc)",
         link: "https://drive.google.com/file/d/1ZHMVKJRZjCJ8OBKwbtd_A8vUJE-IU0r3/view?usp=sharing"
+      }
+    ]
+  },
+  {
+    id: 8,
+    name: "Olexii Tymoshenko",
+    role: "Embedded / IoT Developer",
+    avatar: "/images/team/olexii_tymoshenko.jpg",
+    skills: [
+      "Microcontroller Design",
+      "Assembly",
+      "Java",
+      "Kotlin",
+      "HTML & CSS",
+      "English (B2)",
+      "Arduino",
+      "Git", 
+      "GitHub",
+      "Analysis of Algorithms",
+      "Discrete Mathematics",
+      "Object-Oriented Programming(OOP)", 
+      "Analytical Skills",
+      "PostgreSQL",
+      "SQL",
+      "Problem Solving",
+      "Clean Architecture",
+      "Docker"
+    ],
+    socials: {},
+    projects: [],
+    diplomas: [
+      {
+        title: "Certified Software Tester (ISTQB Foundation Level)",
+        link: "#"
       }
     ]
   },
@@ -431,25 +467,5 @@ export const teamData: TeamMember[] = [
       }
     ]
   },
-  {
-    id: 8,
-    name: "Olexii Tymoshenko",
-    role: "Intern",
-    avatar: "/images/team/olexii_tymoshenko.jpg",
-    skills: [
-      "Microcontroller Design",
-      "Assembly",
-      "Java",
-      "Kotlin",
-      "HTML & CSS",
-    ],
-    socials: {},
-    projects: [],
-    diplomas: [
-      {
-        title: "Certified Software Tester (ISTQB Foundation Level)",
-        link: "#"
-      }
-    ]
-  },
+  
 ];
