@@ -249,7 +249,8 @@ export const teamData: TeamMember[] = [
       "Python (FastAPI, LangChain, LangGraph, OpenCV, Aiogram, Selenium, Bs4)",
       "Machine Learning",
       "LlamaIndex",
-      "SQL (PostgreSQL, SQLite)",
+      "PostgreSQL",
+      "SQL"
       "C#",
       "Unity",
       "C++",
