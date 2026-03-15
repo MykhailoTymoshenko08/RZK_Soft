@@ -169,7 +169,9 @@ export const teamData: TeamMember[] = [
       "Clean Architecture",
       "Docker"
     ],
-    socials: {},
+    socials: {
+      instagram: "https://www.instagram.com/rinzunaka_misha_._/"
+    },
     projects: [],
     diplomas: [
       {
@@ -250,7 +252,7 @@ export const teamData: TeamMember[] = [
       "Machine Learning",
       "LlamaIndex",
       "PostgreSQL",
-      "SQL"
+      "SQL",
       "C#",
       "Unity",
       "C++",
