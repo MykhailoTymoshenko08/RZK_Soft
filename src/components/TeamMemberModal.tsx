@@ -189,7 +189,8 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
         s.includes('discrete math') || s.includes('data structure') ||
         s.includes('design pattern') || s.includes('solid') ||
         s.includes('refactor') || s.includes('programming') ||
-        s.includes('mathematical thinking') || s.includes('math')
+        s.includes('mathematical thinking') || s.includes('math') || 
+        s.includes('system design') || s.includes('clean code')
       ) {
         categories[t.csFundamentals].push(skill)
 
@@ -204,7 +205,7 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
         s.includes('beautifulsoup') || s.includes('ai integration') ||
         s.includes('openai') || s.includes('hugging face') || s.includes('transformers') ||
         s.includes('selenium') && s.includes('python') ||
-        s.includes('analytical skills')
+        s.includes('analytical skills') || s.includes('computer vision')
       ) {
         categories[t.aiML].push(skill)
 
@@ -292,7 +293,7 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
         s.includes('project management') || s.includes('stakeholder') ||
         s.includes('requirements') || s.includes('prioritiz') ||
         s.includes('team coordination') || s.includes('team leadership') ||
-        s.includes('planning')
+        s.includes('planning') 
       ) {
         categories[t.management].push(skill)
 
@@ -301,7 +302,8 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
         s.includes('teamwork') || s.includes('communication') ||
         s.includes('problem solving') || s.includes('critical thinking') ||
         s.includes('collaboration') || s.includes('fast learning') ||
-        s.includes('analytical')
+        s.includes('analytical') || s.includes('project management') || 
+        s.includes('product management') || s.includes('rapid learning')
       ) {
         categories[t.softSkills].push(skill)
 

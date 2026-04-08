@@ -24,51 +24,59 @@ export const teamData: TeamMember[] = [
   {
     id: 1,
     name: "Mykhailo Tymoshenko",
-    role: "Founder, CEO & Lead Full-Stack/AI Engineer",
+    role: "Fouder, Lead Full-Stack/AI Engineer & CEO",
     avatar: "/images/team/mykhailo_tymoshenko.jpg",
     skills: [
-      "Python (LangChain, ChromaDB, Tavily, FastAPI, Streamlit, SQLite3, asyncio, pydantic, RAG)", 
-      "Linux",
-      "Docker",
+      "Python (ChromaDB, LangChain, PyTorch, NumPy, Pandas, Tavily, FastAPI, Streamlit, asyncio, pydantic, Matplotlib)", 
+      "Object-Oriented Programming(OOP)",
+      "Machine Learning",
+      "Computer Vision",
       "C++", 
-      "Assembly", 
+      "Assembly",
+      "Linux",
+      "RAG",
+      //"LangChain",
+      //"PyTorch",
+      //"NumPy",
+      //"Pandas",
+      "Project Management",
+      "Product Management",
+      "Docker",
       "Clean Architecture",
+      "Clean Code",
+      "System Design",
       "Problem Solving",
       "Java",
-      "AI Integration",
       "SQL",
-      "Fast Learning",
+      "Rapid Learning",
       "Tailwind CSS",
       "OpenRouter API",
       "TypeScript",
       "PostgreSQL",
-      "Redis",
       "Next.js",
-      "Computer Networking",
+      "Computer Networking(CISCO)",
       "Analysis of Algorithms",
       "Discrete Mathematics",
-      "Object-Oriented Programming(OOP)", "Analytical Skills",
-      "Machine Learning",
       "Analytical Skills",
       "Teamwork",
       "Team Leadership",
-      "English (C1)",
       "Arduino",
       "C (programming language)",
+      "English (C1)",
       "Russian (Native)",
       "Ukrainian (Native)",
       "Spanish (B2)",
       "Polish (B1)",
-      "French (B1)",
+      //"French (B1)",
       "React.js", 
-      "Git", 
-      "GitHub", 
+      "Git & GitHub", 
+      //"GitHub", 
       "HTML & CSS", 
       "JavaScript", 
       "Figma", 
-      "Trello", 
+      //"Trello", 
       "N8N", 
-      "Canva"
+      //"Canva"
     ],
     socials: {
       github: "https://github.com/MykhailoTymoshenko08",
@@ -145,20 +153,22 @@ export const teamData: TeamMember[] = [
       "Kotlin",
       "Algorithmic Thinking",
       "Computer Architecture",
+      "C++",
       "C (programming language)",
       "Russian (Native)",
       "Ukrainian (Native)",
       "HTML & CSS",
       "English (B2)",
       "Arduino",
-      "Git", 
+      "Git & GitHub",
+      "Computer Vision",
+      "Clean Code",
       "Analytical Skills",
       "Fast Learning",
       "Linux",
       "Android Development",
       "MySQL",
       "C#",
-      "GitHub",
       "Analysis of Algorithms",
       "Discrete Mathematics",
       "Object-Oriented Programming(OOP)", 
@@ -181,125 +191,6 @@ export const teamData: TeamMember[] = [
     ]
   },
   {
-    id: 2,
-    name: "Mykhailo Haliapa",
-    role: "Junior Developer (C/JavaScript) & COO",
-    avatar: "/images/team/mykhailo_haliapa.jpg",
-    skills: [
-      "React.js", 
-      "C++",
-      "Python(json, pydantic, asyncio)",
-      "OOP(Object-Oriented Programming)",
-      "PostgreSQL",
-      "C (programming language)", 
-      "Git", 
-      "GitHub", 
-      "HTML & CSS", 
-      "JavaScript", 
-      "English (B2)",
-      "Russian (Native)",
-      "Ukrainian (Native)",
-      "Polish (B2)",
-      "Spanish (B1)",
-      "Figma", 
-      "Project Management",
-      "Team Leadership"
-    ],
-    socials: {
-      github: "https://github.com/morgonets",
-      instagram: "https://www.instagram.com/misha.carasik_fortnite/"
-    },
-    projects: [
-      {
-        title: "To_Do_List_On_C",
-        description: "To-Do list where you can plan your day, change tasks, adding and remowing them.",
-        link: "https://github.com/morgonets/To_Do_List_On_C"
-      },
-      {
-        title: "Snake_Game_On_C",
-        description: "Just a regular snake game.",
-        link: "https://github.com/morgonets/Snake_Game_On_C"
-      },
-       {
-        title: "Matrix_Calculator_On_C",
-        description: "Matrix calculator that can count matrix 2x2 3x3 adding and sumbstruct them.",
-        link: "https://github.com/morgonets/Matrix_Calculator_On_C"
-      },
-      {
-        title: "Cliker_On_C",
-        description: "A simple clicker game built in C.",
-        link: "https://github.com/morgonets/Cliker_On_C"
-      },
-    ],
-    diplomas: [
-      {
-        title: "Business Management Certificate",
-        link: "#"
-      },
-      {
-        title: "Project Management Professional",
-        link: "#"
-      }
-    ]
-  },
-  {
-    id: 3,
-    name: "Ivan Krutkevych",
-    role: "AI Engineer & CTO",
-    avatar: "/images/team/ivan_krutkevych.jpg",
-    skills: [
-      "Python (FastAPI, LangChain, LangGraph, OpenCV, Aiogram, Selenium, Bs4)",
-      "Machine Learning",
-      "LlamaIndex",
-      "PostgreSQL",
-      "SQL",
-      "C#",
-      "Unity",
-      "C++",
-      "Git",
-      "GitHub",
-      "Arduino",
-      "English (B2)",
-      "Russian (Native)",
-      "Ukrainian (Native)",
-      "German (B1)",
-      "Object-Oriented Programming (OOP)",
-      "Problem Solving",
-      "Algorithmic Thinking",
-      "Team Collaboration"
-    ],
-    socials: {
-      linkedin: "https://www.linkedin.com/in/ivan-krutkevych-8b0b49282",
-      instagram: "https://www.instagram.com/krutk"
-    },
-    projects: [
-      {
-        title: "Lapaton 2026 – 'Mriya' Track",
-        description: "Award-winning hackathon project focused on innovative technologies beyond standard school and university programs.",
-        link: ""
-      },
-      {
-        title: "AI-Based Educational Tools",
-        description: "Development of digital tools leveraging AI and ML for educational and social purposes, supporting displaced students and communities.",
-        link: ""
-      }
-    ],
-    diplomas: [
-      {
-        title: "1st Place – Kyiv City Programming Olympiad (2024)",
-        link: ""
-      },
-      {
-        title: "Finalist – All-Ukrainian Programming Olympiad (2023)",
-        link: ""
-      },
-      {
-        title: "3rd Place – Lapaton 'Mriya' Track (2026)",
-        link: ""
-      }
-    ]
-  },
-  {
     id: 4,
     name: "Volodymyr Lavrientiev",
     role: "Lead Mobile Developer",
@@ -307,6 +198,14 @@ export const teamData: TeamMember[] = [
     skills: [
       "Jetpack Compose",
       "React Native",
+      "Kotlin",
+      "Git & GitHub",
+      "Computer Networking(CISCO)",
+      "Analysis of Algorithms",
+      "Discrete Mathematics",
+      "Object-Oriented Programming (OOP)",
+      "Clean Code",
+      "Teamwork",
       "Flutter",
       "Android XML",
       "Firebase",
@@ -372,6 +271,126 @@ export const teamData: TeamMember[] = [
     ]
   },
   {
+    id: 3,
+    name: "Ivan Krutkevych",
+    role: "AI Engineer & CTO",
+    avatar: "/images/team/ivan_krutkevych.jpg",
+    skills: [
+      "Python (FastAPI, LangChain, LangGraph, OpenCV, Aiogram, Selenium, Bs4)",
+      "Machine Learning",
+      "LlamaIndex",
+      "PostgreSQL",
+      "SQL",
+      "C#",
+      "Unity",
+      "Computer Vision",
+      "RAG",
+      "Discrete Mathematics",
+      "Git & GitHub",
+      "Arduino",
+      "English (B2)",
+      "Russian (Native)",
+      "Ukrainian (Native)",
+      "German (B1)",
+      "Object-Oriented Programming (OOP)",
+      "Problem Solving",
+      "Algorithmic Thinking",
+      "Teamwork"
+    ],
+    socials: {
+      linkedin: "https://www.linkedin.com/in/ivan-krutkevych-8b0b49282",
+      instagram: "https://www.instagram.com/krutk"
+    },
+    projects: [
+      {
+        title: "Lapaton 2026 – 'Mriya' Track",
+        description: "Award-winning hackathon project focused on innovative technologies beyond standard school and university programs.",
+        link: ""
+      },
+      {
+        title: "AI-Based Educational Tools",
+        description: "Development of digital tools leveraging AI and ML for educational and social purposes, supporting displaced students and communities.",
+        link: ""
+      }
+    ],
+    diplomas: [
+      {
+        title: "1st Place – Kyiv City Programming Olympiad (2024)",
+        link: ""
+      },
+      {
+        title: "Finalist – All-Ukrainian Programming Olympiad (2023)",
+        link: ""
+      },
+      {
+        title: "3rd Place – Lapaton 'Mriya' Track (2026)",
+        link: ""
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: "Mykhailo Haliapa",
+    role: "Junior Developer (C/JavaScript) & COO",
+    avatar: "/images/team/mykhailo_haliapa.jpg",
+    skills: [
+      "React.js", 
+      "C++",
+      "Python(json, pydantic, asyncio)",
+      "OOP(Object-Oriented Programming)",
+      "PostgreSQL",
+      "C (programming language)", 
+      "Git & GitHub", 
+      "HTML & CSS", 
+      "JavaScript", 
+      "Discrete Mathematics",
+      "English (B2)",
+      "Russian (Native)",
+      "Ukrainian (Native)",
+      "Polish (B2)",
+      //"Spanish (B1)",
+      "Figma", 
+      "Project Management",
+      "Team Leadership"
+    ],
+    socials: {
+      github: "https://github.com/morgonets",
+      instagram: "https://www.instagram.com/misha.carasik_fortnite/"
+    },
+    projects: [
+      {
+        title: "To_Do_List_On_C",
+        description: "To-Do list where you can plan your day, change tasks, adding and remowing them.",
+        link: "https://github.com/morgonets/To_Do_List_On_C"
+      },
+      {
+        title: "Snake_Game_On_C",
+        description: "Just a regular snake game.",
+        link: "https://github.com/morgonets/Snake_Game_On_C"
+      },
+       {
+        title: "Matrix_Calculator_On_C",
+        description: "Matrix calculator that can count matrix 2x2 3x3 adding and sumbstruct them.",
+        link: "https://github.com/morgonets/Matrix_Calculator_On_C"
+      },
+      {
+        title: "Cliker_On_C",
+        description: "A simple clicker game built in C.",
+        link: "https://github.com/morgonets/Cliker_On_C"
+      },
+    ],
+    diplomas: [
+      {
+        title: "Business Management Certificate",
+        link: "#"
+      },
+      {
+        title: "Project Management Professional",
+        link: "#"
+      }
+    ]
+  },
+  {
     id: 5,
     name: "Oleh Shevchenko",
     role: "QA Engineer",
@@ -380,10 +399,17 @@ export const teamData: TeamMember[] = [
       "Automated Testing (Selenium, Cypress)",
       "Bug Tracking (Jira, Trello)",
       "Test Case Design",
-      "API Testing",
+      "API Testing (Postman)",
       "Regression Testing",
       "Performance Testing",
-      "CI/CD Integration"
+      "CI/CD Integration",
+      "SQL for QA",
+      "SDLC / STLC",
+      "Mobile Testing (Appium)",
+      "Test Documentation",
+      "Ukrainian (Native)",
+      "Russian (Native)",
+      "English (B2)"
     ],
     socials: {
       linkedin: "https://linkedin.com/in/oleh-shevchenko",
@@ -415,12 +441,19 @@ export const teamData: TeamMember[] = [
     skills: [
       "Figma",
       "Adobe XD",
+      "Adobe Photoshop / Illustrator",
       "Wireframing",
       "Prototyping",
       "User Research",
       "Interaction Design",
       "Design Systems",
-      "Responsive Design"
+      "Responsive Design",
+      "Typography & Color Theory",
+      "Mobile-First Design",
+      "User Flows & Journey Mapping",
+      "Ukrainian (Native)",
+      "Russian (Native)",
+      "English (С1)"
     ],
     socials: {
       instagram: "https://www.instagram.com/kkeews.s/"
@@ -449,14 +482,20 @@ export const teamData: TeamMember[] = [
     name: "Dmytro Shevchuk",
     role: "Junior DevOps Engineer",
     skills: [
-      "Linux",
-      "Docker",
-      "Git/GitHub",
-      "CI/CD Basics",
+      "Linux (Ubuntu/CentOS)",
+      "Docker & Docker Compose",
+      "Git & GitHub Actions",
+      "CI/CD Pipelines",
       "Bash Scripting",
-      "Monitoring Basics",
-      "Cloud Fundamentals (AWS Free Tier)",
-      "Problem Solving"
+      "Nginx / Apache",
+      "Monitoring (Prometheus & Grafana)",
+      "Cloud Fundamentals (AWS/Azure)",
+      "Infrastructure as Code (Terraform basics)",
+      "Networking Protocols (TCP/IP, DNS, SSL)",
+      "YAML / JSON",
+      "Problem Solving",
+      "Ukrainian (Native)",
+      "English (B2)"
     ],
     socials: {
       linkedin: "https://linkedin.com/in/dmytro-shevchuk",

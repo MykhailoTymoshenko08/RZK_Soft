@@ -52,7 +52,7 @@ export const newsData: NewsArticle[] = [
     "categoryEs": "Noticias de la empresa",
     "categoryDe": "Unternehmensnachrichten",
     "categoryNl": "Bedrijfsnieuws",
-    "image": "/images/news/team-development-fund.png",
+    "image": "/images/news/img-id7.png",
     "readTime": 3,
     "tags": ["Team", "Growth", "Education", "Company News", "Milestone"]
   },
@@ -80,7 +80,7 @@ export const newsData: NewsArticle[] = [
     "categoryEs": "Noticias de la empresa",
     "categoryDe": "Unternehmensnachrichten",
     "categoryNl": "Bedrijfsnieuws",
-    "image": "/images/news/team-restructuring.png",
+    "image": "/images/news/img-id6.png",
     "readTime": 3,
     "tags": ["Team", "Milestone", "Update", "Company News"]
   },
@@ -108,7 +108,7 @@ export const newsData: NewsArticle[] = [
     "categoryEs": "Noticias de la empresa",
     "categoryDe": "Unternehmensnachrichten",
     "categoryNl": "Bedrijfsnieuws",
-    "image": "/images/news/team-update-skills.png",
+    "image": "/images/news/img-id5.png",
     "readTime": 3,
     "tags": ["Update", "Team", "UI/UX", "Milestone", "Website"]
   },
