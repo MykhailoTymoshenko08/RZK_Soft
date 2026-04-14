@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Hero from './components/Hero'
+import Header from './components/Header' // header part
+import Hero from './components/Hero' // intro part
 import About from './components/About'
 import Services from './components/Services'
 import Team from './components/Team'

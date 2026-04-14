@@ -35,10 +35,6 @@ export const teamData: TeamMember[] = [
       "Assembly",
       "Linux",
       "RAG",
-      //"LangChain",
-      //"PyTorch",
-      //"NumPy",
-      //"Pandas",
       "Project Management",
       "Product Management",
       "Docker",
@@ -70,7 +66,6 @@ export const teamData: TeamMember[] = [
       //"French (B1)",
       "React.js", 
       "Git & GitHub", 
-      //"GitHub", 
       "HTML & CSS", 
       "JavaScript", 
       "Figma", 
@@ -91,22 +86,22 @@ export const teamData: TeamMember[] = [
       },
       {
         title: "AI Fusion Chat (Multi-LLM Judge Aggregator)",
-        description: "A powerful chat platform aggregating responses from multiple LLMs using the 'LLM-as-a-Judge' approach. Includes RAG capabilities for PDF processing and Tavily Search API integration for real-time web information.",
+        description: "Engineered a production-ready system utilizing an \"LLM-as-a-Judge\" architecture to aggregate and validate responses from multiple AI providers in parallel. Implemented RAG for document processing and T avily Search API for real-time web grounding",
         link: "https://github.com/MykhailoTymoshenko08/AI-Fushion-Chat-MVP"
       },
       {
-        title: "Gladiator-Arena-Simulation-TS",
-        description: "A TypeScript-based simulation of gladiator battles in an arena setting, featuring various gladiator types and combat mechanics.",
+        title: "Logistics AI Optimization (Nova Poshta)",
+        description: "Developed an end-to-end monitoring system for a majorlogistics terminal analyzing video feeds from 1,100+cameras in real-time. Integrated Computer Vision (YOLO)models to detect workflow bottlenecks and safetyviolations, significantly increasing terminal throughput",
         link: "https://github.com/MykhailoTymoshenko08/Gladiator-Arena-Simulation-TS"
       },
       {
-        title: "Task-Manager (C++)",
-        description: "A console-based task management application allowing users to create, view, update, and delete tasks with persistent storage.",
+        title: "Customer Support AI Analyzer (Skelar Project)",
+        description: "",
         link: "https://github.com/MykhailoTymoshenko08/Task-Manager-cpp"
       },
       {
-        title: "Game 2048 (C++)",
-        description: "Console-based implementation of the classic 2048 puzzle game with smooth gameplay mechanics.",
+        title: "Task Manager (C++):",
+        description: "Student management system with CSV-based data storage.",
         link: "https://github.com/MykhailoTymoshenko08/game2048_Cpp"
       }
     ],
@@ -199,6 +194,8 @@ export const teamData: TeamMember[] = [
       "Jetpack Compose",
       "React Native",
       "Kotlin",
+      "C++",
+      "C (programming language)",
       "Git & GitHub",
       "Computer Networking(CISCO)",
       "Analysis of Algorithms",

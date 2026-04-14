@@ -449,6 +449,7 @@ const TeamMemberModal = ({ member, onClose, language }: TeamMemberModalProps) =>
                 {currentTranslations.projects}
               </h3>
               
+              
               <div className="space-y-4">
                 {member.projects.map((project, index) => (
                   <div key={index} className="custom-card p-6">

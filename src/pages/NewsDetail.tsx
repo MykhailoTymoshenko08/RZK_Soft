@@ -6,7 +6,7 @@ const NewsDetail = () => {
   const { id } = useParams()
   const { translations, language } = useLanguage()
 
-  // Знайти статтю за ID
+  // search state by id
   const article = newsData.find(item => item.id === Number(id))
 
   const getLocalizedText = (field: string) => {
@@ -33,7 +33,7 @@ const NewsDetail = () => {
     })
   }
 
-  // Знайти пов'язані статті (інші статті з такими ж тегами або категорією)
+  // search for artile by similar word
   const relatedArticles = article 
     ? newsData
         .filter(item => 
@@ -64,7 +64,6 @@ const NewsDetail = () => {
   return (
     <section className="py-16 md:py-24 section-padding">
       <div className="container mx-auto max-w-4xl">
-        {/* Back Button */}
         <div className="mb-8">
           <Link to="/news" className="inline-flex items-center gap-2 text-brandCyan hover:text-cyan-400">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,7 +74,6 @@ const NewsDetail = () => {
         </div>
 
         <article className="custom-card p-6 md:p-8">
-          {/* Category & Date */}
           <div className="flex items-center justify-between mb-6">
             <span className="px-4 py-1.5 bg-brandCyan/20 text-brandCyan rounded-full text-sm font-medium">
               {getLocalizedCategory()}
